@@ -1,0 +1,150 @@
+base_url: https://whatsapp.turn.io/
+prod_dir: Prod
+qa_dir: QA
+stack_uuids:
+- name: NPS survey
+  prod_uuid: 7c7af46f-659b-408b-82ff-7fbf7f701c25
+  qa_uuid: b3fe92c2-22b2-479c-8489-2ca47904bc39
+- name: Main menu
+  prod_uuid: cb400ec7-7fba-4547-8f7e-bc0a8379fd75
+  qa_uuid: 859a3671-352b-4cee-8cce-0cad94dd896e
+- name: Onboarding
+  prod_uuid: e706ab77-0634-4568-a8e1-456332568d4f
+  qa_uuid: eb162abd-04cc-4633-9430-e3555cde2148
+- name: Gamified_ OB_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 344b7e4b-0d98-4bd9-8c18-10630827c389
+- name: Gamified_Module1_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 05fc89de-144d-4685-8454-fb9dfe1ed2f5
+- name: Gamified_QuizPostModule1_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 990a0952-194a-4662-8420-6fde3b1bd4d5
+- name: Gamified_Module2_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: e80863c0-a2b9-4cf7-b7e2-f8e083d9f0f3
+- name: Gamified_Module3_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: c04612da-95ae-49fb-bb1d-8f3195e74417
+- name: Gamified_Module4_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 6c86c38c-3c45-4ac4-b5a6-292ec6fbd6d4
+- name: Gamified_Module5_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 2de9bf0a-4c8f-4420-a251-ad7138cefa48
+- name: Gamified_Module6_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 03bfbcbf-9a2d-4a6f-a7b7-dc9641cfbeef
+- name: Gamified_QuizPostModule3_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 73d14130-5469-4ca8-bc5c-e333d572673b
+- name: Gamified_QuizPostModule5_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 1672c9b2-6975-4090-8af9-30f7b382750c
+- name: Narrative_ OB_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 822fc39c-da90-4f4c-8ebd-b6626cf48ae2
+- name: Narrative_Module1_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: d131bd25-321a-4534-a916-d650f6b24137
+- name: Narrative_QuizPostModule1_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 0be2a66c-24f0-4e14-9deb-a4ca085eb483
+- name: Narrative_Module2_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 564e2738-5ebd-4d8b-83cc-de9e68e3688b
+- name: Narrative_Module3_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 16720298-d52d-41f7-add3-0f7cd31a675e
+- name: Sticker test
+  prod_uuid: missing_uuid
+  qa_uuid: 9ab94b30-02d7-40ac-9a81-dfdce1fc25bc
+- name: Narrative_Module4_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 573ab5ce-3cf5-4584-9fba-3ce24ecc80e7
+- name: Narrative_QuizPostModule3_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 08b90907-ee3b-4f5f-920f-1d22b8e6e462
+- name: Narrative_Module5_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: ae4c1f6c-95da-44fa-b7e5-eb78a37e7756
+- name: Narrative_QuizPostModule5_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 95b86fa4-a781-4217-925a-3e79286c70e9
+- name: Narrative_Module6_Eng
+  prod_uuid: missing_uuid
+  qa_uuid: 8b8f8975-402c-4046-a31a-971e905f679e
+- name: Date Test
+  prod_uuid: missing_uuid
+  qa_uuid: 5a81e06f-8d94-4e01-90bf-f6703731b81c
+- name: Untitled Journey 1
+  prod_uuid: missing_uuid
+  qa_uuid: 7f7b5550-a7f2-4130-bd8b-95862ac3e9f3
+- name: Spanish_Gamified_ OB
+  prod_uuid: 0450f64f-6f36-47c2-a5b0-1d9067ededd2
+  qa_uuid: c9305344-217c-47a2-9cce-0f1f59ef8c65
+- name: Spanish_Gamified_Module1
+  prod_uuid: 0d85be77-dba2-407b-b5bb-32c040a3e572
+  qa_uuid: bf54c800-5e51-495e-945c-44b0621988f3
+- name: Spanish_Gamified_QuizPostModule1
+  prod_uuid: 8ce88f76-fc55-4f39-b407-9238f0a7d12b
+  qa_uuid: fa9e29e5-28a8-4ee6-a7c5-a21feeaad496
+- name: Spanish_Gamified_Module2
+  prod_uuid: 54b257b6-4fb6-4156-b632-e7438073368c
+  qa_uuid: 5321c7b5-480c-4db6-93d6-35126d27c2da
+- name: Spanish_Gamified_Module3
+  prod_uuid: 25c7b9d5-7c07-4cab-bfc1-911f71cbe6a8
+  qa_uuid: 631267d2-d35b-44c4-8116-dcf0e8164f4c
+- name: Spanish_Gamified_QuizPostModule3
+  prod_uuid: 791bfe83-b0b9-4c29-a51a-c0717fd19f45
+  qa_uuid: a649764a-a4be-4c66-979f-e5d977905f37
+- name: Spanish_Gamified_Module4
+  prod_uuid: 8ff13f1a-34a1-4542-800b-456756cb11e0
+  qa_uuid: 96243152-b2f5-436c-8c49-67a841d184ed
+- name: Spanish_Gamified_Module5
+  prod_uuid: db28fc8f-f9af-4dd7-bc55-749cd21aab07
+  qa_uuid: 5dd7aa57-7663-471f-8858-ce258aa2e036
+- name: Spanish_Gamified_QuizPostModule5
+  prod_uuid: 820bb40a-f72b-4d3c-acd3-1362c6abf1ef
+  qa_uuid: 04cc01f5-ed87-4f9a-a9d0-3822422e27c1
+- name: Spanish_Gamified_Module6
+  prod_uuid: 0f564cfe-1a29-4207-abb5-41fd7bdcc52f
+  qa_uuid: a238e01b-0799-4e7a-8751-8a8e22ab15b2
+- name: Spanish_Narrative_ OB
+  prod_uuid: 25065e06-6925-498c-a343-fe13ae776b81
+  qa_uuid: 8797ac14-3047-40b4-be6c-5fcbfde38e1b
+- name: Spanish_Narrative_Module1
+  prod_uuid: e2e7954a-ab0b-454e-b1fb-ccf0f307afbe
+  qa_uuid: b13a77d8-25b7-4ead-97bf-a81202927a30
+- name: Spanish_Narrative_QuizPostModule1
+  prod_uuid: 218aa065-1ce0-4e44-9c55-3fa8722f2e83
+  qa_uuid: 3987cb28-d6ee-4977-8609-3a380b428a45
+- name: Spanish_Narrative_Module2
+  prod_uuid: d921f8d4-bf34-4881-96a2-5ec3376908a6
+  qa_uuid: 30c3600a-31b5-4ee2-ad05-b0ea402dcb52
+- name: Spanish_Narrative_Module3
+  prod_uuid: 6ec113d5-ce5b-4f13-921f-a04752584f83
+  qa_uuid: d11b8851-dad4-42f7-84f3-3a718da48a80
+- name: Spanish_Narrative_QuizPostModule3
+  prod_uuid: b81a7f94-1b77-45b7-b2a0-25c247b02060
+  qa_uuid: bab63d15-22b7-4576-82f3-e67c5cc0f33e
+- name: Spanish_Narrative_Module4
+  prod_uuid: ab6f0833-0040-486e-9028-9b1578a25eab
+  qa_uuid: ac56ce15-0e35-4f38-9325-570bca675a72
+- name: Spanish_Narrative_Module5
+  prod_uuid: 5361bfaa-1775-4035-b6fc-ce60d40406a6
+  qa_uuid: 4a96ccd3-8e0b-43a3-b541-fedf859759ab
+- name: Spanish_Narrative_QuizPostModule5
+  prod_uuid: 1dc88b68-4396-4f5e-8642-91fa90ad6557
+  qa_uuid: 877e3c0c-fd77-4391-9b10-85bb5e0749a4
+- name: Spanish_Narrative_Module6
+  prod_uuid: 2177501b-25f9-4a0f-a614-d50cadaf74ec
+  qa_uuid: ee31e053-3dd6-44bf-8785-f24cabe35bcd
+- name: Delete Data
+  prod_uuid: missing_uuid
+  qa_uuid: dfdf386c-227a-4f02-88f7-6ee27a9ad962
+- name: Test
+  prod_uuid: missing_uuid
+  qa_uuid: 5836fc70-d041-4b0c-a63b-e5d2e7d56874
+tokens: []
+urls: []
