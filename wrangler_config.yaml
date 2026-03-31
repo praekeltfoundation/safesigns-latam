@@ -1,0 +1,9 @@
+conversions:
+- from: qa
+  name: qa-to-prod
+  to: prod
+environments:
+- name: prod
+  path: Prod
+- name: qa
+  path: QA

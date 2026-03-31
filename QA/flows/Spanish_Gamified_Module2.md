@@ -8,7 +8,7 @@ when has_only_phrase(event.message.text.body, "test_g2_2") or
 
 ```
 
-<!-- { section: "538044a6-0f61-4589-b8d9-1e71086cc225", x: -336, y: -24} -->
+<!-- { section: "9e4f8114-8048-4e35-a7a2-7a1e9f4b624d", x: -888, y: -24} -->
 
 ```stack
 card Message_1, "Message_1",
@@ -24,7 +24,7 @@ end
 
 ```
 
-<!-- { section: "f2c400d6-7d11-4ab7-8cf6-ba560cff6daf", x: 672, y: 24} -->
+<!-- { section: "017220ff-9c83-4187-99ab-538589f34a27", x: 312, y: -24} -->
 
 ```stack
 card Message_2, "Message_2",
@@ -45,7 +45,7 @@ end
 
 ```
 
-<!-- { section: "83b2eb67-ad4c-4df6-9e76-199a0b4e4c21", x: 984, y: -864} -->
+<!-- { section: "a2c1b2f1-1d47-4063-92bf-d467b4986934", x: 312, y: -240} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -58,7 +58,7 @@ end
 
 ```
 
-<!-- { section: "f65d2a8b-1aa2-47c7-afaa-37396a102911", x: 1824, y: -120} -->
+<!-- { section: "cb893269-cdb1-4311-a7a3-ad88cb654cd6", x: 1584, y: -24} -->
 
 ```stack
 card Message_3_1, "Message_3_1",
@@ -74,7 +74,7 @@ end
 
 ```
 
-<!-- { section: "a601a0b2-6bab-4183-ab8b-1ec6dc7927c6", x: 1848, y: 384} -->
+<!-- { section: "18dff571-97f7-4009-b5f7-da411aad9c59", x: 1584, y: 336} -->
 
 ```stack
 card Message_3_2, "Message_3_2",
@@ -99,6 +99,7 @@ card Message_4, "Message_4",
       text("Además, recuerda que, entre más larga tu racha, ¡más stickers vas acumulando!")
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "Vale 👍")
   then(Catch_all_2)
 end
@@ -148,6 +149,7 @@ card Message_6, "Message_6",
       )
     end
 
+  write_result("message_6", ref_Message_6)
   then(Message_8 when ref_Message_6 == "Ok 👌")
   then(Catch_all_3)
 end
@@ -192,6 +194,7 @@ card Message_7, "Message_7",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_7", ref_Message_7)
   then(Message_9 when ref_Message_7 == "Ya escuché el audio")
   then(Catch_all_4)
 end
@@ -244,6 +247,7 @@ card Message_10, "Message_10",
       text("¡Gracias por contarnos! ✨")
     end
 
+  write_result("message_10", ref_Message_10)
   then(Message_11_ when ref_Message_10 == "Sigue el podcast 🎧")
   then(Catch_all_13)
 end
@@ -262,6 +266,7 @@ card Message_11_1, "Message_11_1",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_11", ref_Message_11_1)
   then(Message_12 when ref_Message_11_1 == "Ya escuché el audio!")
   then(Catch_all_5)
 end
@@ -314,6 +319,7 @@ card Message_13, "Message_13",
       text("¡Gracias por compartirnos estas ideas para sentirnos mejor! ✨")
     end
 
+  write_result("message_13", ref_Message_13)
   then(Message_14_ when ref_Message_13 == "Sigue el podcast 🎧")
   then(Catch_all_6)
 end
@@ -345,6 +351,7 @@ card Message_14_1, "Message_14_1",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_14", ref_Message_14_1)
   then(Message_15 when ref_Message_14_1 == "Ya escuché el audio!")
   then(Catch_all_7)
 end
@@ -411,6 +418,7 @@ card Message_17, "Message_17",
       )
     end
 
+  write_result("message_17", ref_Message_17)
   then(Message_18 when ref_Message_17 == "Vale 👍")
   then(Catch_all_14)
 end
@@ -605,6 +613,7 @@ card Message_23, "Message_23",
       )
     end
 
+  write_result("message_23", ref_Message_23)
   then(Sticker_1 when ref_Message_23 == "¡Manda mis stickers!")
   then(Catch_all_9)
 end
@@ -640,7 +649,7 @@ end
 
 ```
 
-<!-- { section: "f5b0ed83-f60a-4235-8d91-4d9cf28259cd", x: 19560, y: 504} -->
+<!-- { section: "ed90865e-73e6-478a-bf70-568487cada2f", x: 19680, y: 504} -->
 
 ```stack
 card Message_26, "Message_26",
@@ -648,13 +657,13 @@ card Message_26, "Message_26",
   uuid: "ccefd577-e5e5-508a-a17f-662eecb14671",
   code_generator: "REPLY_BUTTON_TEXT" do
   ref_Message_26 =
-    buttons(["Después del cole", "Antes de dormir", "Al levantarme"]) do
+    buttons(["Después de la U", "Antes de dormir", "Al levantarme"]) do
       text(
         "Ahora te voy a dejar este reto: Para mañana, haz tu primer día de práctica y piensa ¿Cuándo quieres hacer tu rutina para que no se te olvide?"
       )
     end
 
-  then(Message26_1 when ref_Message_26 == "Después del cole")
+  then(Message26_1 when ref_Message_26 == "Después de la U")
   then(Message26_2 when ref_Message_26 == "Antes de dormir")
   then(Message26_3 when ref_Message_26 == "Al levantarme")
   then(Catch_all_10)
@@ -676,6 +685,7 @@ card Message_27, "Message_27",
       )
     end
 
+  write_result("message_27", ref_Message_27)
   then(Message_28 when ref_Message_27 == "Entendido 🌸")
   then(Catch_all_11)
 end
@@ -695,7 +705,7 @@ end
 
 ```
 
-<!-- { section: "89687717-dfe7-42ec-9345-9f1978306fc3", x: 19536, y: -360} -->
+<!-- { section: "5ad473d2-c576-490e-98d3-5d6c9bc4a760", x: 19680, y: 216} -->
 
 ```stack
 card Catch_all_10, "Catch_all_10",
@@ -708,7 +718,7 @@ end
 
 ```
 
-<!-- { section: "7477056e-9ae0-44cc-a51a-1ce41a21d4b8", x: 22056, y: -288} -->
+<!-- { section: "d2dbf087-137f-4069-850e-e2d804712bea", x: 22056, y: 264} -->
 
 ```stack
 card Catch_all_11, "Catch_all_11",
@@ -882,7 +892,7 @@ end
 
 ```
 
-<!-- { section: "3f94c615-56ce-43fe-ae66-bdaa9a9ee0bd", x: 21000, y: 552} -->
+<!-- { section: "6ffa2683-0f2d-4316-8985-3394e83cd9cb", x: 21000, y: 504} -->
 
 ```stack
 card Safe_Guarding_1, "Safe_Guarding_1",
@@ -898,19 +908,20 @@ end
 
 ```
 
-<!-- { section: "77c437a0-38af-45fb-bbad-be54d85a409c", x: 21504, y: 648} -->
+<!-- { section: "7cf9494c-8310-49a7-9878-c8fbbc8c3742", x: 21504, y: 504} -->
 
 ```stack
 card Safe_Guarding_2, "Safe_Guarding_2",
   version: "1",
   uuid: "be3ce969-d47d-522d-9af4-2579a8212d11",
   code_generator: "TEXT_MESSAGE" do
-  text(
-    "1. Línea Púrpura (WhatsApp): +57 300 7551846 o *Visita aquí* https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura 
-2. Línea 141 (ICBF) – Atención 24/7
-3. Reporte en Línea: *Te Protejo* https://teprotejocolombia.org/"
-  )
+  text("• Línea MAAD: lineamaad@uniandes.edu.co
 
+• Ombudsperson: ombudsperson@uniandes.edu.co
+
+• Decanatura de Estudiantes: centrodeapoyo@uniandes.edu.co
+
+• Consejerxs MAAD: ombudsperson.uniandes.edu.co/maqd1/consejerxs-maad")
   then(Message_27)
 end
 
@@ -977,7 +988,7 @@ end
 
 ```
 
-<!-- { section: "ee606718-c601-48d2-8786-5a483826b316", x: 23568, y: 456} -->
+<!-- { section: "5f6036f3-d235-412c-a3cc-f579907140ce", x: 23568, y: 504} -->
 
 ```stack
 card ModuleCompleted do
@@ -996,7 +1007,7 @@ end
 
 ```
 
-<!-- { section: "60acc57d-f722-459c-b0b7-3c0e8f1c8dad", x: 96, y: -24} -->
+<!-- { section: "cc783086-72cc-4e3c-ade6-7c1ea3fca7b0", x: -408, y: -24} -->
 
 ```stack
 card Message1 do
@@ -1007,7 +1018,7 @@ end
 
 ```
 
-<!-- { section: "fb640fb7-ea51-4be0-acc2-39c5ac665bb7", x: 1344, y: -120} -->
+<!-- { section: "8fba1d15-e29c-41d4-8c17-5d13d4120ceb", x: 984, y: -24} -->
 
 ```stack
 card Message2_1 do
@@ -1017,7 +1028,7 @@ end
 
 ```
 
-<!-- { section: "dd57880d-d779-48fe-b432-ff0897be03c7", x: 1344, y: 240} -->
+<!-- { section: "b29863ba-76ca-4eaa-9563-41d0c7f0284e", x: 984, y: 336} -->
 
 ```stack
 card Message2_2 do
@@ -1087,7 +1098,7 @@ end
 
 ```
 
-<!-- { section: "5b327fe7-ec8a-4db5-8f52-61e77f714e3a", x: 20064, y: 288} -->
+<!-- { section: "1c4e5dba-e795-4a5e-8bab-bfd223569c4e", x: 20280, y: 504} -->
 
 ```stack
 card Message26_1 do
@@ -1097,7 +1108,7 @@ end
 
 ```
 
-<!-- { section: "c3873596-a87d-406f-8aa8-feb45e16134f", x: 20088, y: 648} -->
+<!-- { section: "da4fb9c9-b54e-4f39-ac90-f0d1cff8ce35", x: 20280, y: 840} -->
 
 ```stack
 card Message26_2 do
@@ -1107,7 +1118,7 @@ end
 
 ```
 
-<!-- { section: "76514b76-798c-4b07-8513-2f9ad6434426", x: 20112, y: 984} -->
+<!-- { section: "642683d6-6e4d-4c32-b525-f5ecedd63bdc", x: 20280, y: 1200} -->
 
 ```stack
 card Message26_3 do

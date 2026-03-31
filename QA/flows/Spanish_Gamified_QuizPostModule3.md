@@ -1,4 +1,4 @@
-<!-- { section: "9a32b08e-320d-48b3-b210-1328242da055", x: -1656, y: -288} -->
+<!-- { section: "a526b6e4-d1ad-491a-886e-da87441aa2be", x: -1656, y: -72} -->
 
 ```stack
 trigger(interval: "+1m", relative_to: "contact.next_engagement_time")
@@ -9,18 +9,15 @@ trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "t
 
 ```
 
-<!-- { section: "676c0223-98ad-4449-a9e0-44e16485c204", x: -1080, y: -312} -->
+<!-- { section: "3208029f-a934-41d7-b737-63376d465adc", x: -1128, y: -72} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "d9ccf1c2-42c1-4c99-b8f8-8d72c1806d1f",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_gamified_quiz_postmod3", "es", [], buttons: ["¡Cuentame más!"])
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "c561979a-a6d5-4abf-b25e-97c866eb5682",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module3_started", "yes")
+  then(Template_1)
 end
 
 ```
@@ -41,13 +38,14 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "¡Genial!")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "7e6c33aa-e4c3-4885-b42d-c4e8dde547d2", x: -624, y: -600} -->
+<!-- { section: "2551e907-1dd6-447c-8122-6cec45a77ba9", x: -528, y: -408} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -430,6 +428,22 @@ end
 
 ```
 
+<!-- { section: "c6aa2ba8-44bc-4db6-8034-91dd9d544f0f", x: -528, y: -72} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "3d17d45e-8e19-4bb6-a1a4-ab7c3e16bbb7",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_gamified_quiz_postmod3", "es", [], buttons: ["¡Cuentame más!"])
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
+end
+
+```
+
 <!-- { section: "4d11a993-ed03-408d-91f5-77dc65da13cf", x: 3168, y: 744} -->
 
 **@buhle**
@@ -512,8 +526,8 @@ code block is here if you need that
 
 <!-- { section: "e9eb8a92-d329-44c3-97b9-c14f9d6f9d5a", x: 12840, y: 552} -->
 
-~~Update contact field, contact module =~~~~~~~~~~~~
-~~~~~~~~~~~~Quiz Post module 3 ✅~~
+~~Update contact field, contact module =~~~~~~~~~~~~~~~~~~~~~~~~~~~~\
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~Quiz Post module 3 ✅~~
 
 <!-- { section: "2b2f331e-d514-435b-9f78-d7c8a7c2ce74", x: 13416, y: 528} -->
 
@@ -563,11 +577,11 @@ end
 
 ```
 
-<!-- { section: "66c52ca7-1d48-410a-9fb1-45d164412be0", x: 480, y: -24} -->
+<!-- { section: "79d4cf5e-31c3-4ba7-8809-849589ee3827", x: 432, y: -96} -->
 
 ```stack
 card Message1 do
-  write_result("quiz_pm3_started", "yes")
+  write_result("template1", "¡Cuéntame más!")
   then(Message_2)
 end
 

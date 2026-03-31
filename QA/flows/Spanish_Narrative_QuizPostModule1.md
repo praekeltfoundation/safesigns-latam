@@ -1,4 +1,4 @@
-<!-- { section: "43084e90-e3ab-4978-97a2-502783cbd514", x: -480, y: -48} -->
+<!-- { section: "8bf5df39-b4dc-4166-b458-97840c3452b6", x: -480, y: -24} -->
 
 ```stack
 trigger(interval: "+1m", relative_to: "contact.next_engagement_time")
@@ -9,20 +9,15 @@ trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "t
 
 ```
 
-<!-- { section: "de8ab352-7751-4414-a1c2-d431e00b08d7", x: 24, y: -24} -->
+<!-- { section: "3d0fdcc6-bf51-42b8-9415-1aedf4edd2da", x: -72, y: -24} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "72548ac7-357e-49f4-a10a-415c2b229155",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_narrative_quiz_postmod1", "es", [],
-      buttons: ["¡Cuéntame más!"]
-    )
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "0921ef5d-3c39-4736-a138-efb040075506",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module1_started", "yes")
+  then(Template_1)
 end
 
 ```
@@ -41,6 +36,7 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "🤔")
   then(Catch_all_2)
 end
@@ -87,6 +83,7 @@ card Message_3, "Message_3",
       )
     end
 
+  write_result("message_3", ref_Message_3)
   then(Message_4 when ref_Message_3 == "¡Genial!")
   then(Catch_all_3)
 end
@@ -537,6 +534,24 @@ end
 
 ```
 
+<!-- { section: "3d95402f-e83b-418b-9264-b5c31d070b16", x: 264, y: -24} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "5b0a0fcf-2041-4531-a154-c10d9195a4c4",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_narrative_quiz_postmod1", "es", [],
+      buttons: ["¡Cuéntame más!"]
+    )
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
+end
+
+```
+
 <!-- { section: "d63459ce-649c-4885-bfc4-9f6d1b238348", x: 14928, y: 576} -->
 
 need a variable /insight name based on the grading, see notes under each
@@ -606,12 +621,12 @@ end
 
 ```
 
-<!-- { section: "ebfc56ca-2ad6-43db-8b90-1d4a6ef5c9fc", x: 912, y: -24} -->
+<!-- { section: "62cf0de1-4d24-43cd-b006-3b1bf2a3b675", x: 720, y: 0} -->
 
 ```stack
 card Message1 do
   update_contact(quiz_post_module1_complete: "false")
-  write_result("quiz_pm1_started", "yes")
+  write_result("template_1", "¡Cuéntame más!")
   then(Message_2)
 end
 

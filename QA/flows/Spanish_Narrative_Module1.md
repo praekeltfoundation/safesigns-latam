@@ -1,4 +1,4 @@
-<!-- { section: "6b151134-1b99-4541-b010-8d2aea223e53", x: -2304, y: 144} -->
+<!-- { section: "33b5c65d-d5a4-4ac5-b54a-f9f962310f43", x: -2856, y: 0} -->
 
 ```stack
 card Branch_9e8873, "Branch_9e8873",
@@ -18,7 +18,7 @@ end
 
 ```
 
-<!-- { section: "2b2ef48b-c615-455a-94c7-cb5ddf6fd95b", x: -1752, y: -72} -->
+<!-- { section: "b89b84a5-3a57-447c-9a61-fc9fbb37bc8a", x: -2232, y: 0} -->
 
 ```stack
 card Message_1, "Message_1",
@@ -55,7 +55,7 @@ end
 
 ```
 
-<!-- { section: "d98e6106-3c51-432d-a38d-6e748815ab36", x: -1704, y: -672} -->
+<!-- { section: "6d94ae39-7d04-442c-96a8-85e050e2d30e", x: -2232, y: -168} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -68,7 +68,7 @@ end
 
 ```
 
-<!-- { section: "62e7f46d-3731-4f3d-a1f7-e8f5a202b8ff", x: -24, y: 24} -->
+<!-- { section: "527d1236-1265-49fe-8486-9b1178af5ef4", x: -48, y: 0} -->
 
 ```stack
 card Message_3, "Message_3",
@@ -81,7 +81,7 @@ end
 
 ```
 
-<!-- { section: "660dbdc1-7610-49e9-9863-adc423241229", x: 408, y: -24} -->
+<!-- { section: "05f0810d-feb2-45ed-9a2f-0665d5af62cc", x: 408, y: 0} -->
 
 ```stack
 card Message_4, "Message_4",
@@ -93,13 +93,14 @@ card Message_4, "Message_4",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "Ya escuché el audio!")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "0e95448b-925b-40f3-be60-b9f5a159aeee", x: 480, y: -528} -->
+<!-- { section: "fff941c7-a81f-4390-ac2b-87d4877ee56b", x: 408, y: -264} -->
 
 ```stack
 card Catch_all_2, "Catch_all_2",
@@ -112,7 +113,7 @@ end
 
 ```
 
-<!-- { section: "3a193799-c074-4069-aa3d-2b0f20e143dc", x: 912, y: 72} -->
+<!-- { section: "6749eb76-bc0d-4c6f-8db5-64854590a2b4", x: 912, y: 0} -->
 
 ```stack
 card Message_5, "Message_5",
@@ -129,7 +130,7 @@ end
 
 ```
 
-<!-- { section: "47a7cc1c-6276-4944-a48c-515df801993a", x: 2448, y: -648} -->
+<!-- { section: "965f1b12-f9e0-48df-9aab-0afb0bbde99f", x: 2640, y: -264} -->
 
 ```stack
 card Catch_all_3, "Catch_all_3",
@@ -142,7 +143,7 @@ end
 
 ```
 
-<!-- { section: "a955c338-9327-44e0-878a-4cd0bbf29530", x: 2232, y: 48} -->
+<!-- { section: "5960547b-0821-4094-ba4f-e16d3ad88923", x: 2232, y: 0} -->
 
 ```stack
 card Message_6, "Message_6",
@@ -155,7 +156,7 @@ end
 
 ```
 
-<!-- { section: "23fb2ae2-57b1-4224-aa4c-f2282a279933", x: 2640, y: 24} -->
+<!-- { section: "92f5b077-c01c-4812-9c98-d07282eecb9e", x: 2640, y: 0} -->
 
 ```stack
 card Message_7, "Message_7",
@@ -177,7 +178,7 @@ end
 
 ```
 
-<!-- { section: "88e88d06-9888-4b70-9b98-5c9681c4512f", x: 4104, y: 96} -->
+<!-- { section: "d80836be-0d32-4e44-aad4-4f0c93cc19ed", x: 4104, y: 0} -->
 
 ```stack
 card Message_8, "Message_8",
@@ -191,13 +192,14 @@ card Message_8, "Message_8",
       )
     end
 
+  write_result("message_8", ref_Message_8)
   then(Message_9 when ref_Message_8 == "Siguiente pregunta")
   then(Catch_all_24)
 end
 
 ```
 
-<!-- { section: "9130242c-d6e2-43cd-baf9-28bcac0600f4", x: 4632, y: 96} -->
+<!-- { section: "d9b1f368-72b5-4984-84b9-3f8e4950a42a", x: 4632, y: 0} -->
 
 ```stack
 card Message_9, "Message_9",
@@ -263,18 +265,6 @@ end
 
 ```
 
-<!-- { section: "515d9d2d-ac70-441c-b46c-090031e7be7d", x: 6072, y: -552} -->
-
-```stack
-card Catch_all_5, "Catch_all_5",
-  version: "1",
-  uuid: "4d2962be-6850-500d-b8d5-df3162098b68",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
-end
-
-```
-
 <!-- { section: "eb09cb06-03b7-494a-b49e-c1654fe3fdfd", x: 6792, y: 168} -->
 
 ```stack
@@ -287,13 +277,14 @@ card Message_12_, "Message_12_",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_12", ref_Message_12_)
   then(Message_13 when ref_Message_12_ == "Ya escuché el audio")
   then(Catch_all_6)
 end
 
 ```
 
-<!-- { section: "654093aa-5467-40be-8965-024cb1452885", x: 6744, y: -600} -->
+<!-- { section: "d9219333-b42c-4d73-b654-ff97608cd83f", x: 6792, y: -168} -->
 
 ```stack
 card Catch_all_6, "Catch_all_6",
@@ -316,7 +307,7 @@ card Message_13, "Message_13",
   ref_Message_13 =
     buttons(["Dile, se afana🌹", "Mala señal 🚨", "No estoy segura🤔"]) do
       text(
-        "¿Qué pensarían *tus amigas* si el chico con el que sales es el más papacito del colegio y, a la vez, te pide que digas dónde estás todo el tiempo porque, si no, se enoja?"
+        "¿Qué pensarían *tus amigas* si el chico con el que sales es el más papacito del universidad y, a la vez, te pide que digas dónde estás todo el tiempo porque, si no, se enoja?"
       )
     end
 
@@ -328,7 +319,7 @@ end
 
 ```
 
-<!-- { section: "60d7ec08-5492-4e4f-ae51-1e1a34f2403c", x: 7344, y: -600} -->
+<!-- { section: "bce36266-c683-4e2d-a976-0dc2c7ab39b4", x: 7440, y: -72} -->
 
 ```stack
 card Catch_all_7, "Catch_all_7",
@@ -341,7 +332,7 @@ end
 
 ```
 
-<!-- { section: "32671c7d-8c5f-4de5-b55d-beb09122be65", x: 8760, y: -72} -->
+<!-- { section: "cd0d9f6d-23b2-4f7e-a10d-12c14187f94b", x: 8760, y: -96} -->
 
 ```stack
 card Message_14_1, "Message_14_1",
@@ -349,7 +340,7 @@ card Message_14_1, "Message_14_1",
   uuid: "22dfb5d4-d7ad-5836-a32b-fd9c7d343497",
   code_generator: "TEXT_MESSAGE" do
   text(
-    "Que sea el más papacito del colegio no justifica que debas estar con él. Si alguien te pide que le informes todo el tiempo dónde estás y se enoja si no lo haces, podría ser una señal de control. Piensa en cómo te hace sentir y si es realmente lo que quieres en una relación. Si oyes algo así, recuérdale a tus amigas que una pareja debe confiar en ti, no vigilarte"
+    "Que sea el más papacito de la universidad no justifica que debas estar con él. Si alguien te pide que le informes todo el tiempo dónde estás y se enoja si no lo haces, podría ser una señal de control. Piensa en cómo te hace sentir y si es realmente lo que quieres en una relación. Si oyes algo así, recuérdale a tus amigas que una pareja debe confiar en ti, no vigilarte"
   )
 
   then(Message_15)
@@ -357,19 +348,7 @@ end
 
 ```
 
-<!-- { section: "cbd6b9c4-603a-4d2a-a65d-2c042c6ba9ed", x: 8712, y: -792} -->
-
-```stack
-card Catch_all_8, "Catch_all_8",
-  version: "1",
-  uuid: "f51e6f73-cd5f-5cd6-bb7a-3dee8b6a0084",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
-end
-
-```
-
-<!-- { section: "30a3b124-fb7b-4c2e-9c81-60919e7c07f8", x: 8736, y: 672} -->
+<!-- { section: "66e333f3-95ae-461a-9542-1635e7a0bf91", x: 8760, y: 336} -->
 
 ```stack
 card Message_14_2, "Message_14_2",
@@ -385,7 +364,7 @@ end
 
 ```
 
-<!-- { section: "1c0d1871-c59a-4f69-9a1b-8d60014f0c67", x: 8712, y: 1608} -->
+<!-- { section: "bd7e65c8-b59a-4a10-8bbb-cf2219c7a05c", x: 8760, y: 792} -->
 
 ```stack
 card Message_14_3, "Message_14_3",
@@ -397,30 +376,6 @@ card Message_14_3, "Message_14_3",
   )
 
   then(Message_15)
-end
-
-```
-
-<!-- { section: "ffbf63a6-9382-4afe-88fb-362bb8b8146d", x: 7896, y: 1104} -->
-
-```stack
-card Catch_all_9, "Catch_all_9",
-  version: "1",
-  uuid: "716f40be-c939-5261-b228-89a4ab91511f",
-  code_generator: "TEXT_MESSAGE" do
-  text("I didn't understand that very well. Please try again using my buttons")
-end
-
-```
-
-<!-- { section: "fe99366e-34ec-4db3-9885-1a39ef4315ad", x: 8256, y: 2280} -->
-
-```stack
-card Catch_all_10, "Catch_all_10",
-  version: "1",
-  uuid: "94300c17-3a4c-5cf3-b3b8-8f7ef65bd123",
-  code_generator: "TEXT_MESSAGE" do
-  text("I didn't understand that very well. Please try again using my buttons")
 end
 
 ```
@@ -441,7 +396,7 @@ end
 
 ```
 
-<!-- { section: "c498aaba-c09c-47fe-a71d-77cd8b6dc9fc", x: 10440, y: -720} -->
+<!-- { section: "a8f4dbdd-26b5-442e-a4e0-18c4cd2ef11b", x: 10584, y: 192} -->
 
 ```stack
 card Catch_all_11, "Catch_all_11",
@@ -450,18 +405,6 @@ card Catch_all_11, "Catch_all_11",
   code_generator: "TEXT_MESSAGE" do
   text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
   then(Message_16_1)
-end
-
-```
-
-<!-- { section: "49e2a5f0-46b4-4d0d-a8a1-7683f3ebd6cc", x: 10800, y: -720} -->
-
-```stack
-card Catch_all_12, "Catch_all_12",
-  version: "1",
-  uuid: "4ffb1907-234f-584b-b972-7c451e40e7ba",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
 end
 
 ```
@@ -482,20 +425,9 @@ Son temas complejos, por ello para ayudarte a navegarlos te dejo unos stickers b
       )
     end
 
+  write_result("message_16", ref_Message_16_1)
   then(Message_17_sticker_1 when ref_Message_16_1 == "¡Quiero stickers!")
   then(Catch_all_11)
-end
-
-```
-
-<!-- { section: "1560bed6-634c-4e07-85fc-87e9b745a933", x: 11616, y: -744} -->
-
-```stack
-card Catch_all_13, "Catch_all_13",
-  version: "1",
-  uuid: "2ee9d80c-b598-5fe1-892d-c7a3793ce581",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
 end
 
 ```
@@ -514,7 +446,7 @@ end
 
 ```
 
-<!-- { section: "a4ccc7ee-dc8d-4ce2-97d6-bbeaaa9fb262", x: 14472, y: 144} -->
+<!-- { section: "4eeece07-f6a3-4f36-be64-a831e8bb28aa", x: 14472, y: 288} -->
 
 ```stack
 card Message_19, "Message_19",
@@ -536,7 +468,7 @@ end
 
 ```
 
-<!-- { section: "96f963b7-ee88-4f4c-98aa-e353218f5592", x: 14592, y: -504} -->
+<!-- { section: "a02dbb47-2481-4d65-893c-da3a628f3cd8", x: 14472, y: 48} -->
 
 ```stack
 card Catch_all_22, "Catch_all_22",
@@ -563,13 +495,14 @@ card Message_20, "Message_20",
       )
     end
 
+  write_result("message_20", ref_Message_20)
   then(Message_21 when ref_Message_20 == "¡Quiero saberlo!🧐")
   then(Catch_all_23)
 end
 
 ```
 
-<!-- { section: "1a00645d-7998-486d-a1a2-a28fad172690", x: 16776, y: -984} -->
+<!-- { section: "f840dfff-20e9-4424-9674-9fda54585ef3", x: 16680, y: 24} -->
 
 ```stack
 card Catch_all_23, "Catch_all_23",
@@ -582,7 +515,7 @@ end
 
 ```
 
-<!-- { section: "2fd44b51-23ba-4e44-9c64-559334a1d13f", x: 17232, y: 360} -->
+<!-- { section: "78c933f8-8b5a-468b-a6a4-834d8b075b33", x: 17232, y: 312} -->
 
 ```stack
 card Message_21, "Message_21",
@@ -608,7 +541,7 @@ end
 
 ```
 
-<!-- { section: "a1c0bb42-90e3-4ab4-a6eb-b345ee4d2269", x: 13128, y: 264} -->
+<!-- { section: "e7f4b7a9-57e9-414d-84ce-9509d68557a8", x: 12984, y: 288} -->
 
 ```stack
 card Message_18, "Message_18",
@@ -625,7 +558,7 @@ end
 
 ```
 
-<!-- { section: "0f79fa9d-d1a4-4118-9d3a-535d3bbbc312", x: 17768, y: 360} -->
+<!-- { section: "0a72c68e-4cb7-4b94-bc0e-ee02f2710a39", x: 17760, y: 312} -->
 
 ```stack
 card Profile_c9a342, "Profile_c9a342",
@@ -638,7 +571,7 @@ end
 
 ```
 
-<!-- { section: "638dabf4-4e47-4020-a934-685bd2372480", x: 11472, y: 312} -->
+<!-- { section: "dff57023-1a4e-427d-b78e-684623a3afc5", x: 11496, y: 288} -->
 
 ```stack
 card Sticker_2, "Sticker_2",
@@ -666,7 +599,7 @@ end
 
 ```
 
-<!-- { section: "402f3dfe-1fa5-41a3-be26-91da8d42e0c6", x: 12264, y: 288} -->
+<!-- { section: "4d56e2e9-af59-4486-881a-2ab00c167323", x: 12192, y: 288} -->
 
 ```stack
 card Sticker_4, "Sticker_4",
@@ -680,7 +613,7 @@ end
 
 ```
 
-<!-- { section: "ed17344f-65f8-426b-84fa-2e91e9606d5a", x: 12648, y: 288} -->
+<!-- { section: "326b43ab-49c2-470a-b610-95c01011449a", x: 12528, y: 288} -->
 
 ```stack
 card Sticker_5, "Sticker_5",
@@ -694,7 +627,7 @@ end
 
 ```
 
-<!-- { section: "ede2c9f5-122d-4271-b79a-7a69010c3ce2", x: 1320, y: 72} -->
+<!-- { section: "6d41319b-9a78-416d-a34a-fa5bc07a7f90", x: 1320, y: 0} -->
 
 ```stack
 card Branch_ffa09f, "Branch_ffa09f",
@@ -708,7 +641,7 @@ end
 
 ```
 
-<!-- { section: "e9e2f4fb-2c4e-4c80-812f-5c46a9473b13", x: 1008, y: 648} -->
+<!-- { section: "6b0ff0d2-e920-49c5-a032-eed67d64a216", x: 912, y: 456} -->
 
 ```stack
 card Text_245dd4, "Text_245dd4",
@@ -721,7 +654,7 @@ end
 
 ```
 
-<!-- { section: "554491c1-c446-41e6-80d3-b0b70be41eeb", x: 13544, y: 192} -->
+<!-- { section: "d72da249-0aa4-4c01-8a13-1a3c933deeaa", x: 13536, y: 288} -->
 
 ```stack
 card Branch_3aa2b4, "Branch_3aa2b4",
@@ -735,7 +668,7 @@ end
 
 ```
 
-<!-- { section: "4fcb72a3-ebf2-479f-b4dd-5c8802947a88", x: 13392, y: 648} -->
+<!-- { section: "80f7c31f-b142-403d-b6fd-896a9cdfda60", x: 12984, y: 648} -->
 
 ```stack
 card Catch_all_2_1, "Catch_all_2_1",
@@ -771,18 +704,19 @@ card Safe_Guarding_2, "Safe_Guarding_2",
   version: "1",
   uuid: "be3ce969-d47d-522d-9af4-2579a8212d11",
   code_generator: "TEXT_MESSAGE" do
-  text(
-    "1. Línea Púrpura (WhatsApp): +57 300 7551846 o *Visita aquí* https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura  
-2. Línea 141 (ICBF) – Atención 24/7
-3. Reporte en Línea: *Te Protejo* https://teprotejocolombia.org/"
-  )
+  text("• Línea MAAD: lineamaad@uniandes.edu.co
 
+• Ombudsperson: ombudsperson@uniandes.edu.co
+
+• Decanatura de Estudiantes: centrodeapoyo@uniandes.edu.co
+
+• Consejerxs MAAD: ombudsperson.uniandes.edu.co/maqd1/consejerxs-maad")
   then(Message_20)
 end
 
 ```
 
-<!-- { section: "435a6a8c-d6b1-4f38-965b-35f4c2771046", x: -1776, y: 384} -->
+<!-- { section: "d6a20efd-d3e3-42ac-bce3-5b5fb47149be", x: -2232, y: 384} -->
 
 ```stack
 card RunStack_b303a2_1, "RunStack_b303a2_1",
@@ -794,7 +728,7 @@ end
 
 ```
 
-<!-- { section: "edd5743d-43d6-4226-99c1-b675f77e1202", x: -1776, y: 528} -->
+<!-- { section: "c586cc10-50e2-4c28-a02a-1c31deb6d35c", x: -2232, y: 528} -->
 
 ```stack
 card RunStack_c74805_1, "RunStack_c74805_1",
@@ -806,7 +740,7 @@ end
 
 ```
 
-<!-- { section: "d9404747-093c-4099-81e9-d6b00f5c151b", x: -1776, y: 672} -->
+<!-- { section: "37e05f6c-ccd2-4e34-98e2-c9c3fc0d0463", x: -2232, y: 672} -->
 
 ```stack
 card RunStack_e4ca89_1, "RunStack_e4ca89_1",
@@ -818,7 +752,13 @@ end
 
 ```
 
-<!-- { section: "1bab17e8-6697-4f30-b15f-48d1fc70282f", x: 1704, y: 48} -->
+<!-- { section: "2c36c2b3-5b88-4167-840d-7e9648e1ca63", x: -3336, y: -192} -->
+
+Content Master sheet is here:
+
+https://docs.google.com/spreadsheets/d/14JAmTFuQ8fX4kSq18ETyNOZ3jzjjCykP/edit?usp=sharing&ouid=112722710667683232518&rtpof=true&sd=true
+
+<!-- { section: "fc7f4ffe-11d6-4b4e-b165-60459fd3f07b", x: 1704, y: 0} -->
 
 ```stack
 card Message5 do
@@ -829,7 +769,7 @@ end
 
 ```
 
-<!-- { section: "ba2bb9a6-89db-4dc9-8c4e-0129ca81b9b0", x: 13968, y: 120} -->
+<!-- { section: "ae5e6e21-9029-4473-90bf-61204b58a5c3", x: 13968, y: 288} -->
 
 ```stack
 card Message18 do
@@ -839,7 +779,7 @@ end
 
 ```
 
-<!-- { section: "c5309665-9699-4276-9ed1-5b206bb6357c", x: 18216, y: 288} -->
+<!-- { section: "662a3f4f-e39b-4347-b9c6-d1165396cbf2", x: 18216, y: 312} -->
 
 ```stack
 card ModuleCompleted do
@@ -938,7 +878,7 @@ end
 
 ```
 
-<!-- { section: "aa4f23dc-f3e0-4d4e-b7b6-7ff2d78b0d47", x: 7968, y: 288} -->
+<!-- { section: "52ecf497-8a7a-4b2c-b0d6-f9687dd992a9", x: 7968, y: 336} -->
 
 ```stack
 card Message13_2 do
@@ -948,7 +888,7 @@ end
 
 ```
 
-<!-- { section: "5f698f7d-07e0-428c-a9e9-c437e996703d", x: 7968, y: 624} -->
+<!-- { section: "25a25efa-1d2f-4b36-8f95-7b67d213eba0", x: 7968, y: 792} -->
 
 ```stack
 card Message13_3 do
@@ -958,7 +898,7 @@ end
 
 ```
 
-<!-- { section: "c980a29a-d554-4883-821a-0fc53b8ec00f", x: 15120, y: 0} -->
+<!-- { section: "e8084333-eb71-4bca-8e9a-30a4e4e57fff", x: 15072, y: 0} -->
 
 ```stack
 card Message19_1 do
@@ -968,7 +908,7 @@ end
 
 ```
 
-<!-- { section: "8ad04aaf-6bb4-4987-9703-0f8c756fcfc3", x: 15096, y: 408} -->
+<!-- { section: "a090c76d-f2d6-4775-9628-c8d56fbc2141", x: 15072, y: 408} -->
 
 ```stack
 card Message19_2 do
@@ -978,7 +918,7 @@ end
 
 ```
 
-<!-- { section: "a396415c-dca1-42a4-97ac-62a6b612a912", x: 15072, y: 744} -->
+<!-- { section: "9ef5c175-b809-46fe-8ffc-9ffaa12edae3", x: 15072, y: 816} -->
 
 ```stack
 card Message19_3 do
@@ -988,7 +928,7 @@ end
 
 ```
 
-<!-- { section: "92405471-8c13-4441-8ebe-3320e79f5562", x: -2808, y: -168} -->
+<!-- { section: "5a486567-ca15-4fbf-ae56-d3aea927a7d7", x: -3288, y: 48} -->
 
 ```stack
 card RESERVED_TRIGGER, "RESERVED_TRIGGER", code_generator: "RESERVED_TRIGGER" do
