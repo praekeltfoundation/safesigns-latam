@@ -1,11 +1,11 @@
-<!-- { section: "e500e27a-ffca-42df-a392-b3e2a61676b3", x: -1224, y: 0} -->
+<!-- { section: "f0c71917-5539-428a-bfeb-0c211bb5d9c9", x: -1224, y: -24} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "test_g1")
 
 ```
 
-<!-- { section: "cd9cdf0b-ffca-4967-b7ad-b6e73df53e76", x: -744, y: 96} -->
+<!-- { section: "dd31598a-7d05-477e-9f15-2fd092633e18", x: -744, y: -24} -->
 
 ```stack
 card Branch_450f80, "Branch_450f80",
@@ -37,7 +37,7 @@ end
 
 ```
 
-<!-- { section: "87aa5e5f-4261-4c62-a817-5d0d9fabd8a0", x: 984, y: 0} -->
+<!-- { section: "fba4d122-8995-48ae-a844-eb8dbbeaf31b", x: 1008, y: 24} -->
 
 ```stack
 card Message_2, "Message_2",
@@ -49,6 +49,7 @@ card Message_2, "Message_2",
       text("Este podcast también es un reto 🎯 ")
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "¡Cuéntame más! ")
   then(Catch_all_1)
 end
@@ -98,6 +99,7 @@ card Message_4, "Message_4",
       )
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "¡Genial!")
   then(Catch_all_2)
 end
@@ -131,6 +133,7 @@ card Message_5, "Message_5",
       )
     end
 
+  write_result("message_5", ref_Message_5)
   then(Message_6 when ref_Message_5 == "¡Entendido! 🫡 ")
   then(Catch_all_3)
 end
@@ -158,7 +161,7 @@ card Message_6, "Message_6",
   uuid: "940e045e-d663-5ad9-aa1d-73d9e9e3af89",
   code_generator: "TEXT_MESSAGE" do
   text(
-    "Ahora, vas a escuchar el primer episodio del podcast de Pilar y Mari en el que hablarán sobre las relaciones sanas y tóxicas ☠️. Recuerda que si hay algo de lo que hablan Pilar y Mar o alguna pregunta te llega a hacer sentir incómoda, puedes parar y volver cuando te sientas lista. ¡Lo más importante es que te sientas bien!"
+    "Ahora, vas a escuchar el primer episodio del podcast de Pilar y Mari en el que hablarán sobre las relaciones sanas y tóxicas ☠️. Recuerda que si hay algo de lo que hablan Pilar y Mari o alguna pregunta te llega a hacer sentir incómoda, puedes parar y volver cuando te sientas lista. ¡Lo más importante es que te sientas bien!"
   )
 
   then(Message_7)
@@ -191,6 +194,7 @@ card Message_8, "Message_8",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_8", ref_Message_8)
   then(Message_9 when ref_Message_8 == "Ya escuché el audio")
   then(Catch_all_4)
 end
@@ -219,7 +223,7 @@ card Message_9, "Message_9",
   code_generator: "QUESTION" do
   ref_Message_9 =
     ask(
-      "¿Qué opinas de lo que comentan Pilar y Mar? ¿Crees que si alguien te busca todo el tiempo y te llama muy seguido es tierno o una forma de control? 🧐 *Puedes responder usando texto o notas de voz*"
+      "¿Qué opinas de lo que comentan Pilar y Mari? ¿Crees que si alguien te busca todo el tiempo y te llama muy seguido es tierno o una forma de control? 🧐 *Puedes responder usando texto o notas de voz*"
     )
 
   then(Branch_e77c62)
@@ -239,6 +243,7 @@ card Message_10, "Message_10",
       text("Gracias por tu respuesta ✨")
     end
 
+  write_result("message_10", ref_Message_10)
   then(Message_11 when ref_Message_10 == "Sigue el podcast 🎧")
   then(Catch_all_5)
 end
@@ -270,6 +275,7 @@ card Message_11_1, "Message_11_1",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_11", ref_Message_11_1)
   then(Message_12 when ref_Message_11_1 == "Ya escuché el audio")
   then(Catch_all_6)
 end
@@ -379,6 +385,7 @@ card Message_13_4, "Message_13_4",
       text("Cuando termine el audio, pulsa el botón *Sigue el podcast* 🎧")
     end
 
+  write_result("message_13", ref_Message_13_4)
   then(Message_14_1 when ref_Message_13_4 == "Sigue el podcast 🎧")
   then(Catch_all_10)
 end
@@ -410,6 +417,7 @@ card Message_14, "Message_14",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_14", ref_Message_14)
   then(Message_15 when ref_Message_14 == "Ya escuché el audio!")
   then(Catch_all_11)
 end
@@ -563,6 +571,7 @@ card Message_16_6, "Message_16_6",
       text("Cuando termine el audio, pulsa el botón *Sigue el podcast* 🎧")
     end
 
+  write_result("message_16", ref_Message_16_6)
   then(Message_17_1 when ref_Message_16_6 == "Sigue el podcast 🎧")
   then(Catch_all_15)
 end
@@ -618,6 +627,7 @@ card Message_17, "Message_17",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_17", ref_Message_17)
   then(Message_18 when ref_Message_17 == "Ya escuché el audio!")
   then(Catch_all_18)
 end
@@ -732,13 +742,14 @@ card Message_20, "Message_20",
       )
     end
 
+  write_result("message_20", ref_Message_20)
   then(Sticker_1 when ref_Message_20 == "Quiero mis stickers")
   then(Catch_all_20)
 end
 
 ```
 
-<!-- { section: "2fc95efe-9e26-4f54-9a45-ba1215c987ed", x: 18576, y: 120} -->
+<!-- { section: "6061cfa0-f6da-4b7e-89b5-29832edc7a17", x: 18528, y: 744} -->
 
 ```stack
 card Catch_all_20, "Catch_all_20",
@@ -765,13 +776,14 @@ card Message_22, "Message_22",
       )
     end
 
+  write_result("message_22", ref_Message_22)
   then(Message_23 when ref_Message_22 == "¡Entendido!  🫡")
   then(Catch_all_21)
 end
 
 ```
 
-<!-- { section: "5ccd1790-304f-4010-8bb2-4927ac0d877a", x: 20064, y: 288} -->
+<!-- { section: "e8337609-12db-455a-930e-9389ff2105bd", x: 19920, y: 648} -->
 
 ```stack
 card Catch_all_21, "Catch_all_21",
@@ -784,7 +796,7 @@ end
 
 ```
 
-<!-- { section: "6eafadfa-5924-41f1-8c32-223138d0e8c4", x: 20400, y: 936} -->
+<!-- { section: "dfc90c05-eb4c-4cab-96d2-16439f499c1c", x: 20376, y: 912} -->
 
 ```stack
 card Message_23, "Message_23",
@@ -801,7 +813,7 @@ end
 
 ```
 
-<!-- { section: "49069749-bab0-4fdb-a5a6-d14e92f0a72e", x: 21768, y: 1008} -->
+<!-- { section: "7c2ef0fb-c404-439b-adc1-4aeab31a1256", x: 21768, y: 912} -->
 
 ```stack
 card Message_24, "Message_24",
@@ -823,7 +835,7 @@ end
 
 ```
 
-<!-- { section: "3786712b-de87-47f8-9ff5-c1999d663a40", x: 21672, y: 120} -->
+<!-- { section: "fce858c7-bce9-45a9-bf26-dba434038647", x: 21768, y: 696} -->
 
 ```stack
 card Catch_all_22, "Catch_all_22",
@@ -836,7 +848,7 @@ end
 
 ```
 
-<!-- { section: "c5ef04a3-cfa8-4233-b4fe-77bdb9ecdf52", x: 24192, y: 1128} -->
+<!-- { section: "ee585b19-ba4b-439e-ab8c-5d22a6d7cb28", x: 24192, y: 1104} -->
 
 ```stack
 card Message_25, "Message_25",
@@ -850,13 +862,14 @@ card Message_25, "Message_25",
       )
     end
 
+  write_result("message_25", ref_Message_25)
   then(Message_26 when ref_Message_25 == "Entendido 🌸")
   then(Catch_all_23)
 end
 
 ```
 
-<!-- { section: "aafb9e5f-c001-412a-9f06-6fec9e3fc21b", x: 23448, y: -120} -->
+<!-- { section: "7b6ee103-7354-4016-aa14-63b3c9e304a8", x: 24192, y: 864} -->
 
 ```stack
 card Catch_all_23, "Catch_all_23",
@@ -869,7 +882,7 @@ end
 
 ```
 
-<!-- { section: "566b200c-6f94-417a-9f9b-4df63e39401c", x: 24744, y: 1176} -->
+<!-- { section: "22c2bd28-9db4-4ff2-a1c9-e964e3dbdcf6", x: 24744, y: 1104} -->
 
 ```stack
 card Message_26, "Message_26",
@@ -894,7 +907,7 @@ end
 
 ```
 
-<!-- { section: "14a11d10-1e86-4f72-8210-9e51a4a38eda", x: -72, y: 432} -->
+<!-- { section: "d5676bd0-56e1-45ca-8069-0eb6f401fa87", x: -192, y: 384} -->
 
 ```stack
 card RunStack_e94a5d, "RunStack_e94a5d",
@@ -906,7 +919,7 @@ end
 
 ```
 
-<!-- { section: "31391d97-016a-483e-a495-ffc599675f3e", x: -120, y: 648} -->
+<!-- { section: "075b95aa-39cb-46ea-8251-26950088daab", x: -168, y: 648} -->
 
 ```stack
 card RunStack_126216, "RunStack_126216",
@@ -945,7 +958,7 @@ end
 
 ```
 
-<!-- { section: "75593444-696e-474b-b8c6-4ccd44dd2727", x: 19200, y: 1056} -->
+<!-- { section: "88d77b18-5bac-469c-b47e-83537c6b003e", x: 19152, y: 1056} -->
 
 ```stack
 card Sticker_2, "Sticker_2",
@@ -959,7 +972,7 @@ end
 
 ```
 
-<!-- { section: "8df9ed72-9b8a-43c5-b796-ce09526dacf1", x: 19200, y: 1560} -->
+<!-- { section: "e313be6a-d445-4395-b277-057e851167c1", x: 19152, y: 1512} -->
 
 ```stack
 card Sticker_3, "Sticker_3",
@@ -973,7 +986,7 @@ end
 
 ```
 
-<!-- { section: "e007a5f6-c747-4df0-96a1-102dc249bb83", x: 19248, y: 2088} -->
+<!-- { section: "a0e830c6-381c-4075-996f-7d1c77a5fd8c", x: 19152, y: 1992} -->
 
 ```stack
 card Sticker_4, "Sticker_4",
@@ -987,7 +1000,7 @@ end
 
 ```
 
-<!-- { section: "e9e75c83-cf7c-43b2-a6f4-02fbeff0e4d7", x: 19736, y: 2088} -->
+<!-- { section: "ba1dfcec-7514-43d3-b2e4-9827c41a7fe2", x: 19512, y: 1992} -->
 
 ```stack
 card Sticker_5, "Sticker_5",
@@ -1037,12 +1050,13 @@ card Message_2_25, "Message_2_25",
   version: "1",
   uuid: "b6f63875-a1fa-5a86-8a82-53010e59756c",
   code_generator: "TEXT_MESSAGE" do
-  text(
-    "1. Línea Púrpura (WhatsApp): +57 300 7551846 o *Visita aquí* : https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura
-2. Línea 141 (ICBF) – Atención 24/7
-3. Reporte en Línea: *Te Protejo*: https://teprotejocolombia.org/"
-  )
+  text("• Línea MAAD: lineamaad@uniandes.edu.co
 
+• Ombudsperson: ombudsperson@uniandes.edu.co
+
+• Decanatura de Estudiantes: centrodeapoyo@uniandes.edu.co
+
+• Consejerxs MAAD: ombudsperson.uniandes.edu.co/maqd1/consejerxs-maad")
   then(Message_25)
 end
 
@@ -1075,7 +1089,7 @@ end
 
 ```
 
-<!-- { section: "5efbf47e-4198-4eab-bc52-caeec16cf8d0", x: 20832, y: 1008} -->
+<!-- { section: "c1a10e35-9444-46e0-95aa-5c1dfaebdfdd", x: 20832, y: 912} -->
 
 ```stack
 card Branch_2da197, "Branch_2da197",
@@ -1089,7 +1103,7 @@ end
 
 ```
 
-<!-- { section: "4030253c-3edc-4d6d-9807-69091e942003", x: 20376, y: 1488} -->
+<!-- { section: "290a29b5-49ff-438d-9d84-1acf15d02ef7", x: 20376, y: 1176} -->
 
 ```stack
 card Catch_all_2_2, "Catch_all_2_2",
@@ -1110,7 +1124,7 @@ Emoji does not show up
 
 **@Buhle**
 
-Save user response here
+Save user response here\
 DS note: Flow result: module1_boundaries {user input}
 
 <!-- { section: "a58ffe08-5d20-4f4b-80f8-8736383278ee", x: 21144, y: 1368} -->
@@ -1131,12 +1145,6 @@ Schedule Quiz post module 1 to start next day (6pm)
 
 Update contact.next_engagement_time
 
-<!-- { section: "fe51536d-5e8e-4080-a88c-3878de3a04f6", x: 11040, y: 1272} -->
-
-**@Buhle**
-
-Save insights here
-
 <!-- { section: "060e0776-a2ab-43b2-a011-582e45c35981", x: 456, y: 552} -->
 
 **@Buhle**
@@ -1145,27 +1153,11 @@ DS note: Flow result: module1_started (yes)
 
 I think this is a code block, added one below
 
-<!-- { section: "0df66d9c-328f-4ff1-94ba-40cac8980927", x: 8160, y: 1104} -->
-
-**@Buhle**
-
-Save user insights here
-
-<!-- { section: "9bf6a708-e9c5-475c-a1cf-95b8c34ced1e", x: 22104, y: 1392} -->
-
-**@Buhle**
-
-Save insight here
-
 <!-- { section: "baccb8fa-be7f-4d51-8494-c0b85ce25d1b", x: 24816, y: 1560} -->
 
 **@Buhle**
 
 DS note: Flow result: Flow result: module1_completed (yes)
-
-<!-- { section: "cb943697-aca3-460f-9123-00e043989010", x: 23496, y: 1464} -->
-
-Add a hyperlink over the bolded words: 1. **Visita aquí**: [https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura](https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura)3.**Te protejo:** [https://teprotejocolombia.org/](https://teprotejocolombia.org/)
 
 <!-- { section: "750f568b-4881-450b-83cd-894b9484d3a2", x: 8592, y: -312} -->
 
@@ -1175,7 +1167,13 @@ As of 07/07 this audio file is not working, I have reuploaded it on 08/07 missin
 
 old: Siguiendo con el tema de los celos, ¿Qué le dirías a una amiga si su novio, como Camilo, le insistiera que le dé las contraseñas y usuarios de todas sus redes?
 
-<!-- { section: "bc4729dd-cd5d-4e16-80b6-e894a0cf61d4", x: 432, y: -48} -->
+<!-- { section: "d2bd0bc7-2622-4f53-adc1-bd951521587c", x: -1272, y: -216} -->
+
+Content Master Sheet is here:
+
+https://docs.google.com/spreadsheets/d/1WNTGH41dwU7p26Ssr3r6Mx_x2T2Gtgr9/edit?usp=sharing&ouid=112722710667683232518&rtpof=true&sd=true
+
+<!-- { section: "de92dae2-f86f-4e71-9f8f-c6b60991dbe5", x: 336, y: -24} -->
 
 ```stack
 card Message1 do
@@ -1185,7 +1183,7 @@ end
 
 ```
 
-<!-- { section: "7b2eec68-df28-4e6d-80da-1b1a8bd7a63c", x: 21240, y: 1008} -->
+<!-- { section: "3c3c43f8-a000-4794-b09e-503be01ceb4e", x: 21240, y: 912} -->
 
 ```stack
 card Message23 do
@@ -1196,7 +1194,7 @@ end
 
 ```
 
-<!-- { section: "c706f8d2-5ab3-498c-bcf3-9d2a942785e2", x: 25848, y: 1152} -->
+<!-- { section: "6a4c2097-71a9-431a-ab9d-560a701fba5d", x: 25848, y: 1104} -->
 
 ```stack
 card ModuleCompleted do

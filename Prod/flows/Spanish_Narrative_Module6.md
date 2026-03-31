@@ -1,4 +1,4 @@
-<!-- { section: "1ecafd5a-4b9f-4032-8476-0659c8b4edcb", x: -3648, y: -72} -->
+<!-- { section: "8dec8c7d-cb54-4415-bdee-0d167f91980a", x: -3648, y: 0} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED")
@@ -20,25 +20,7 @@ card Message_1, "Message_1",
 Ahora sí, bienvenida al sexto y último episodio de la historia de Pilar. ¡Qué giro dio la historia y qué rápido ha pasado el tiempo!"
   )
 
-  then(Message1)
-end
-
-```
-
-<!-- { section: "c3500f21-f606-42e2-aad2-0b1a43108f68", x: -2616, y: 192} -->
-
-```stack
-card Branch_4c1d16, "Branch_4c1d16",
-  version: "1",
-  uuid: "47938559-5871-5295-be7d-1bea394f55ce",
-  code_generator: "CONDITIONALS" do
-  then(
-    RESERVED_DEFAULT_CARD
-    when contact.arm == "NARRATIVE" and contact.onboarding_complete == true and
-           contact.contact_module == "MODULE_5" and contact.quiz_post_module5_complete_ == true
-  )
-
-  then(RESERVED_DEFAULT_CARD)
+  then(Insight_1)
 end
 
 ```
@@ -64,7 +46,7 @@ end
 
 ```
 
-<!-- { section: "6aeadd00-1875-45f7-a018-36ac0959aae9", x: -744, y: -960} -->
+<!-- { section: "0b994ec6-1f12-4fbe-acb3-b6ee8cb64baa", x: -792, y: -264} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -77,7 +59,7 @@ end
 
 ```
 
-<!-- { section: "54597469-a7af-4573-9fab-44f537ad05f1", x: 576, y: -144} -->
+<!-- { section: "91dda502-2678-4a44-96f4-6324edfe7119", x: 576, y: 0} -->
 
 ```stack
 card Message_3_1, "Message_3_1",
@@ -90,7 +72,7 @@ end
 
 ```
 
-<!-- { section: "d5f6d774-c244-452d-a3df-6eb84918b0fc", x: 600, y: 528} -->
+<!-- { section: "fd4259bc-de66-4530-a2df-3597cabd012d", x: 576, y: 384} -->
 
 ```stack
 card Message_3_2, "Message_3_2",
@@ -191,6 +173,7 @@ card Message_7, "Message_7",
       )
     end
 
+  write_result("message_7", ref_Message_7)
   then(Message_8 when ref_Message_7 == "Ya escuché el audio")
   then(Catch_all_4)
 end
@@ -347,6 +330,7 @@ card Message_12_1, "Message_12_1",
       )
     end
 
+  write_result("message_12", ref_Message_12_1)
   then(Message_13_1 when ref_Message_12_1 == "Siguiente audio")
   then(Catch_all_9)
 end
@@ -367,6 +351,7 @@ card Message_12_2, "Message_12_2",
       )
     end
 
+  write_result("message_12", ref_Message_12_2)
   then(Message_13_1 when ref_Message_12_2 == "Siguiente audio")
   then(Catch_all_10)
 end
@@ -387,6 +372,7 @@ card Message_12_3, "Message_12_3",
       )
     end
 
+  write_result("message_12", ref_Message_12_3)
   then(Message_13_1 when ref_Message_12_3 == "Siguiente audio")
   then(Catch_all_11)
 end
@@ -559,7 +545,7 @@ card Message_19, "Message_19",
   code_generator: "QUESTION" do
   ref_Message_19 =
     ask(
-      "¡Es hora de pensar en tu plan! Si estás en una situación incómoda, ¿sabes qué plan B puedes activar para llegar a casa a salvo? Piensa en todo lo que necesitas tener para llamar a alguien o encontrar tu camino."
+      "Antes de irnos, ¡Es hora de pensar en tu plan! Si estás en una situación incómoda, ¿sabes que plan B puedes activar para llegar a casa a salvo? Piensa en todo lo que necesitas tener para llamar a alguien o encontrar tu camino...Describe los pasos que incluiría tu Plan B 📝 Puedes responder *en texto o nota de voz*"
     )
 
   then(Branch_6b651f)
@@ -567,7 +553,7 @@ end
 
 ```
 
-<!-- { section: "7db5f6f9-08ff-41cf-8e18-ab94fdecbc99", x: 16488, y: 888} -->
+<!-- { section: "f9384eea-4518-4953-86a3-948311600434", x: 16584, y: 960} -->
 
 ```stack
 card Message_20, "Message_20",
@@ -583,13 +569,14 @@ Son temas complejos, por ello para ayudarte a navegarlos, te dejo unos stickers 
       )
     end
 
+  write_result("message_20", ref_Message_20)
   then(Message_21_sticker_1 when ref_Message_20 == "¡Manda mis stickers!")
   then(Catch_all_14)
 end
 
 ```
 
-<!-- { section: "60d82f45-6031-4cb5-8560-d2003a2c919b", x: 16440, y: 72} -->
+<!-- { section: "e5dfcd65-b31b-492b-9179-e1d31f5554bf", x: 16584, y: 648} -->
 
 ```stack
 card Catch_all_14, "Catch_all_14",
@@ -598,18 +585,6 @@ card Catch_all_14, "Catch_all_14",
   code_generator: "TEXT_MESSAGE" do
   text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones")
   then(Message_20)
-end
-
-```
-
-<!-- { section: "f65519eb-2263-4a8e-8242-70f334d009c7", x: 17544, y: 48} -->
-
-```stack
-card Catch_all_15, "Catch_all_15",
-  version: "1",
-  uuid: "4bee0862-bdcd-5844-8df1-4816d420e326",
-  code_generator: "TEXT_MESSAGE" do
-  text("I didn't understand that very well. Please try again using my buttons")
 end
 
 ```
@@ -624,18 +599,6 @@ card Message_21_sticker_1, "Message_21_sticker_1",
   image("d9139521-35bc-4c41-b1aa-83f0ab487d53-Módulo6_Abrilosojos.webp")
   text("")
   then(Sticker_2)
-end
-
-```
-
-<!-- { section: "1765c980-83a6-4155-bd4c-148e2077a9b2", x: 18960, y: 72} -->
-
-```stack
-card Catch_all_16, "Catch_all_16",
-  version: "1",
-  uuid: "d4296a10-0d55-5756-9088-6b503693c13b",
-  code_generator: "TEXT_MESSAGE" do
-  text("I didn't understand that very well. Please try again using my buttons")
 end
 
 ```
@@ -691,7 +654,7 @@ end
 
 ```
 
-<!-- { section: "50fb98d8-572c-4061-9cdd-8fc388138a7c", x: 22656, y: 840} -->
+<!-- { section: "9e7abfbb-b5b1-49e8-9544-d69659b24d8a", x: 22512, y: 864} -->
 
 ```stack
 card Message_24, "Message_24",
@@ -711,7 +674,7 @@ end
 
 ```
 
-<!-- { section: "1d021892-3b07-4982-9b49-88b18cf5294c", x: 24240, y: 888} -->
+<!-- { section: "8a3d1f6d-442e-461c-bef5-7cb0d73c5137", x: 24408, y: 864} -->
 
 ```stack
 card Message_25, "Message_25",
@@ -723,7 +686,7 @@ end
 
 ```
 
-<!-- { section: "cbad09a5-de62-4e18-b6ba-66e3e9a160f6", x: 22752, y: 168} -->
+<!-- { section: "3650fc46-8903-4706-aa9b-c5957adaaf67", x: 22512, y: 624} -->
 
 ```stack
 card Catch_all_18, "Catch_all_18",
@@ -736,7 +699,7 @@ end
 
 ```
 
-<!-- { section: "83a7ff08-b744-4aa3-b94e-1ed146e00acf", x: 23256, y: 840} -->
+<!-- { section: "8fa6e123-3495-4ec8-8d41-3defe797116d", x: 23256, y: 864} -->
 
 ```stack
 card Profile_cbf172, "Profile_cbf172",
@@ -763,6 +726,7 @@ card Message_10_1, "Message_10_1",
       )
     end
 
+  write_result("message_10", ref_Message_10_1)
   then(Message_11 when ref_Message_10_1 == "Siguiente pregunta")
   then(Catch_all_5)
 end
@@ -783,6 +747,7 @@ card Message_10_2, "Message_10_2",
       )
     end
 
+  write_result("message_10", ref_Message_10_2)
   then(Message_11 when ref_Message_10_2 == "Siguiente pregunta")
   then(Catch_all_2)
 end
@@ -814,6 +779,7 @@ card Message_13, "Message_13",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_13", ref_Message_13)
   then(Message_14 when ref_Message_13 == "Ya escuché el audio")
   then(Catch_all_6)
 end
@@ -989,12 +955,13 @@ card Safe_Guarding_2, "Safe_Guarding_2",
   version: "1",
   uuid: "be3ce969-d47d-522d-9af4-2579a8212d11",
   code_generator: "TEXT_MESSAGE" do
-  text(
-    "1. Línea Púrpura (WhatsApp): +57 300 7551846 o *Visita aquí* https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura  
-2. Línea 141 (ICBF) – Atención 24/7
-3. Reporte en Línea: *Te Protejo* https://teprotejocolombia.org/"
-  )
+  text("• Línea MAAD: lineamaad@uniandes.edu.co
 
+• Ombudsperson: ombudsperson@uniandes.edu.co
+
+• Decanatura de Estudiantes: centrodeapoyo@uniandes.edu.co
+
+• Consejerxs MAAD: ombudsperson.uniandes.edu.co/maqd1/consejerxs-maad")
   then(Message_24)
 end
 
@@ -1027,25 +994,24 @@ end
 
 ```
 
+<!-- { section: "4bc1e795-b276-45e0-9b7d-bb1eba3fad56", x: -1464, y: 0} -->
+
+```stack
+card Insight_1, "Insight_1",
+  version: "1",
+  uuid: "34b644b9-56e4-4770-8b48-e6b3f84a680d",
+  code_generator: "WRITE_RESULTS" do
+  write_result("module6_started", "yes")
+  then(Message_2)
+end
+
+```
+
 <!-- { section: "be50064b-656c-4eb9-8ea0-6c5161cc6a40", x: 12216, y: 1248} -->
 
 **@Buhle**
 
 Please save insights here
-
-<!-- { section: "95176c74-cfab-41c1-b5cf-ae21c9ab4d83", x: -2616, y: 672} -->
-
-**@Buhle**
-
-Please add in the other thingies here ^
-
-<!-- { section: "3ade50e9-495b-47c5-873c-34e167c5daff", x: -1464, y: 288} -->
-
-**@buhle**
-
-Please save the DS note here, not sure which block you needed so I gave you both, please dlt the one you dont need and make sure the other is hooked up
-
-DS note: Flow result: module6_started (yes)
 
 <!-- { section: "0fe93923-c61b-4bce-8998-cd0e0f6e70af", x: -744, y: 408} -->
 
@@ -1087,11 +1053,11 @@ Please save the user response here, its a DS thing so I added a code block below
 
 Please save insights here
 
-<!-- { section: "7a51aa2f-ed0d-4cf3-afcc-4d670ba23a82", x: 23280, y: 1176} -->
+<!-- { section: "72bf5e93-2891-4fe4-8fb4-44a940cd2625", x: 23208, y: 1056} -->
 
 update contact field, contact module = module 6 ✅
 
-<!-- { section: "7adc35cb-f947-409c-9bfe-2e1a51b46677", x: 23976, y: 1176} -->
+<!-- { section: "fd10d6a5-8b9a-4efd-8050-9a4c80168832", x: 23808, y: 1176} -->
 
 **@Buhle**
 
@@ -1105,21 +1071,11 @@ I added in a code block for you below, please dlt the one you arent using
 
 Please save insights here
 
-<!-- { section: "ddb89de4-b59d-49d9-9062-c72e93051092", x: -1488, y: -48} -->
-
-```stack
-card Message1 do
-  write_result("module6_started", "yes")
-  then(Message_2)
-end
-
-```
-
 <!-- { section: "770dd67d-0c20-4578-bbc2-030d3b13f3f2", x: 3936, y: 120} -->
 
 ```stack
 card Message8 do
-  write_result("module6_beliefs2", "@ref_message_8")
+  write_result("module6_beliefs", "@ref_message_8")
   then(Message_9)
 end
 
@@ -1155,7 +1111,7 @@ end
 
 ```
 
-<!-- { section: "df32e34b-fa7e-4e88-9ac8-9888fa68f009", x: -120, y: -192} -->
+<!-- { section: "ed19f859-0081-4fa8-9706-60313c35fe64", x: -120, y: 0} -->
 
 ```stack
 card Message2_1 do
@@ -1165,7 +1121,7 @@ end
 
 ```
 
-<!-- { section: "c26af495-6c93-4f20-8c4e-604bcf4c88a9", x: -96, y: 240} -->
+<!-- { section: "e111fe16-adc9-45e0-838a-10f2e9c49014", x: -120, y: 384} -->
 
 ```stack
 card Message2_2 do
@@ -1179,7 +1135,7 @@ end
 
 ```stack
 card Message9_1 do
-  write_result("module2_beliefs", "a")
+  write_result("module6_beliefs2", "a")
   then(Message_10_1)
 end
 
@@ -1209,7 +1165,7 @@ end
 
 ```stack
 card Message11_1 do
-  write_result("module2_beliefs", "a")
+  write_result("module6_attitudes", "a")
   then(Message_12_1)
 end
 
@@ -1219,7 +1175,7 @@ end
 
 ```stack
 card Message11_2 do
-  write_result("module2_beliefs", "b")
+  write_result("module6_attitudes", "b")
   then(Message_12_2)
 end
 
@@ -1315,7 +1271,7 @@ end
 
 ```
 
-<!-- { section: "e8acb86a-db2d-4219-88dd-f86f144d4d31", x: 23808, y: 840} -->
+<!-- { section: "cbe73cb3-6937-4f75-b204-11506ea31fb6", x: 23808, y: 864} -->
 
 ```stack
 card QuizComplete do
@@ -1358,6 +1314,5 @@ end
 
 ```stack
 interaction_timeout(300)
-ai_auto_memory(false)
 
 ```
