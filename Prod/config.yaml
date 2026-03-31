@@ -1,52 +1,52 @@
 journey_uuids:
 - name: Ayuda
-  uuid: missing_uuid
+  uuid: 5556c427-f901-40a4-a3c0-b5bc5fb96389
 - name: Date Test
-  uuid: missing_uuid
+  uuid: cb43c69e-f381-4f36-8013-7f7e1de84cf8
 - name: Delete Data
-  uuid: missing_uuid
+  uuid: 56dbb2c7-1d55-453e-b03d-6cb9791ee684
 - name: Gamified_Module1_Eng
-  uuid: missing_uuid
+  uuid: 1e5522f4-3d24-488d-92a8-8110a5e67489
 - name: Gamified_Module2_Eng
-  uuid: missing_uuid
+  uuid: ac783be9-6edf-49b2-998b-e8e4a5cf4575
 - name: Gamified_Module3_Eng
-  uuid: missing_uuid
+  uuid: ff09c430-d3e2-47a6-8d3d-88295fdf6d42
 - name: Gamified_Module4_Eng
-  uuid: missing_uuid
+  uuid: d6c336d0-2e11-4257-bfd7-e87c3d181f0d
 - name: Gamified_Module5_Eng
-  uuid: missing_uuid
+  uuid: 4d767a8c-97a6-4cd0-b62f-94eb36ecf21d
 - name: Gamified_Module6_Eng
-  uuid: missing_uuid
+  uuid: af1aaa72-7236-431f-ac75-06d6a0d292fa
 - name: Gamified_OB_Eng_just_for_reference
-  uuid: missing_uuid
+  uuid: b2bbbb0d-61c2-4e56-b926-d5a6ffcba60a
 - name: Gamified_QuizPostModule1_Eng
-  uuid: missing_uuid
+  uuid: 7dda7fbd-1638-4b9b-b315-84d0e6846dbe
 - name: Gamified_QuizPostModule3_Eng
-  uuid: missing_uuid
+  uuid: 13e4728e-cc6f-49cf-b328-b13a1eb649b2
 - name: Gamified_QuizPostModule5_Eng
-  uuid: missing_uuid
+  uuid: 880bfd0b-75f0-445b-a3f5-fd1205062e10
 - name: Main menu
   uuid: cb400ec7-7fba-4547-8f7e-bc0a8379fd75
 - name: Narrative_Module1_Eng
-  uuid: missing_uuid
+  uuid: b1dfa95b-9d18-4d9e-b6ac-ebeb8f2f45a8
 - name: Narrative_Module2_Eng
-  uuid: missing_uuid
+  uuid: bde5c239-369a-48f0-9631-ec9d5fe217f7
 - name: Narrative_Module3_Eng
-  uuid: missing_uuid
+  uuid: cbbf0bce-70bf-4c2b-b166-681ea76f4743
 - name: Narrative_Module4_Eng
-  uuid: missing_uuid
+  uuid: 52d134a8-cc94-4af5-9751-bfe2391cd18a
 - name: Narrative_Module5_Eng
-  uuid: missing_uuid
+  uuid: 2dfb7de8-4e3c-4066-8412-52ef809f06db
 - name: Narrative_Module6_Eng
-  uuid: missing_uuid
+  uuid: 238fea00-6805-4e90-80a7-d530ccd435c3
 - name: Narrative_OB_Eng
-  uuid: missing_uuid
+  uuid: 69ef3715-4988-49b8-bdac-9bde0162cfde
 - name: Narrative_QuizPostModule1_Eng
-  uuid: missing_uuid
+  uuid: 953a1242-fb46-4bed-a4db-34dd59c96b28
 - name: Narrative_QuizPostModule3_Eng
-  uuid: missing_uuid
+  uuid: 7d51accf-eb03-40a1-8cf8-79aa55642491
 - name: Narrative_QuizPostModule5_Eng
-  uuid: missing_uuid
+  uuid: 77da9ae2-e9a2-4898-a530-6d113d02f93f
 - name: NPS survey
   uuid: 7c7af46f-659b-408b-82ff-7fbf7f701c25
 - name: Onboarding
@@ -66,7 +66,7 @@ journey_uuids:
 - name: Spanish_Gamified_OB
   uuid: 0450f64f-6f36-47c2-a5b0-1d9067ededd2
 - name: Spanish_Gamified_OB_dev
-  uuid: missing_uuid
+  uuid: e6ef71f8-c598-491d-b127-e11d9e02f8e5
 - name: Spanish_Gamified_QuizPostModule1
   uuid: 8ce88f76-fc55-4f39-b407-9238f0a7d12b
 - name: Spanish_Gamified_QuizPostModule3
@@ -88,7 +88,7 @@ journey_uuids:
 - name: Spanish_Narrative_OB
   uuid: 25065e06-6925-498c-a343-fe13ae776b81
 - name: Spanish_Narrative_OB_dev
-  uuid: missing_uuid
+  uuid: 866a68d6-115f-4ef4-b3b8-7e05dcc2d246
 - name: Spanish_Narrative_QuizPostModule1
   uuid: 218aa065-1ce0-4e44-9c55-3fa8722f2e83
 - name: Spanish_Narrative_QuizPostModule3
@@ -96,10 +96,10 @@ journey_uuids:
 - name: Spanish_Narrative_QuizPostModule5
   uuid: 1dc88b68-4396-4f5e-8642-91fa90ad6557
 - name: Sticker test
-  uuid: missing_uuid
+  uuid: 4199e896-65ac-4de0-a714-4b60ee523c35
 - name: Test
-  uuid: missing_uuid
+  uuid: 7b87b169-787e-4b6f-90e9-7102ee0d7626
 - name: Untitled Journey 1
-  uuid: missing_uuid
+  uuid: f3b695c0-c658-4102-9d79-28007a1727aa
 token_env_key: TURN_TOKEN_SS_PROD
 turn_base_url: https://whatsapp.turn.io/

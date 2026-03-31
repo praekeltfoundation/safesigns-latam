@@ -1,4 +1,4 @@
-<!-- { section: "0313b5a4-3dac-4035-94f5-0ff0b8adaa64", x: -1032, y: -144} -->
+<!-- { section: "ef66244a-826d-41d1-ac65-e59c8f61d439", x: -1032, y: 120} -->
 
 ```stack
 trigger(interval: "+1m", relative_to: "contact.next_engagement_time")
@@ -9,18 +9,15 @@ trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "t
 
 ```
 
-<!-- { section: "0d7afedf-70c2-467c-8989-63ff975e7d47", x: -528, y: -168} -->
+<!-- { section: "fe5cc112-6ba6-46e7-9f4a-3d2b3b144cc2", x: -480, y: 120} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "8537af2b-0d71-4aab-9b51-bc20e8ebcabb",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_gamified_quiz_postmod5", "es", [], buttons: ["¡Cuéntame más!"])
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "6af5f7f3-ff11-4676-bdb4-2f2d59d89767",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module5_", "yes")
+  then(Template_1)
 end
 
 ```
@@ -39,13 +36,14 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "¡Genial!")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "735c8e2f-8a69-41f4-a0cc-17d7369c8e5d", x: 168, y: -408} -->
+<!-- { section: "e0fc211a-51c6-456f-9ee6-b2a9caccdb05", x: -24, y: -264} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -523,6 +521,30 @@ end
 
 ```
 
+<!-- { section: "6b166e07-c1c6-489f-88b0-a2f05cbb9d83", x: -24, y: 120} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "7db405fe-a6cd-40f8-b93b-a50983553194",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_gamified_quiz_postmod5", "spa", [],
+      translated_body_params: [],
+      translated_document: [],
+      translated_header: [],
+      translated_image: [],
+      translated_url: [],
+      translated_video: [],
+      buttons: ["0"]
+    )
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
+end
+
+```
+
 <!-- { section: "35948745-b26a-4e89-be4b-de127dbfa3e1", x: 3168, y: 576} -->
 
 **@Buhle**
@@ -595,7 +617,7 @@ opt b = 2
 
 opt c = 0
 
-<!-- { section: "0afb2253-5fda-4cc8-9ffb-3cf5db26934d", x: 792, y: 360} -->
+<!-- { section: "1048273c-fef2-4067-8748-4c9837968916", x: 768, y: 456} -->
 
 **@buhle**
 
@@ -634,11 +656,11 @@ end
 
 ```
 
-<!-- { section: "e4995cb1-be09-421d-923e-47a9d526799f", x: 888, y: 0} -->
+<!-- { section: "11be6a2e-4ade-43a3-98f9-e63c72039c08", x: 768, y: 120} -->
 
 ```stack
 card Message1 do
-  write_result("quiz_pm5_started", "yes")
+  write_result("template1", "¡Cuéntame más!")
   then(Message_2)
 end
 
@@ -681,8 +703,8 @@ end
 
 ```stack
 card Message3_3 do
-  write_result("quiz_pm3_q1_value", "c")
-  write_result("quiz_pm3_q1_score", "1")
+  write_result("quiz_pm5_q1_value", "c")
+  write_result("quiz_pm5_q1_score", "1")
   then(Message_4_3)
 end
 

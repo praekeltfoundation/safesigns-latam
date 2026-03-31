@@ -1,4 +1,4 @@
-<!-- { section: "595340ec-bce6-4eb8-8c68-42def336d76e", x: -1224, y: -24} -->
+<!-- { section: "427ea4cc-48f1-4537-98d0-ebf304988fa7", x: -1224, y: 192} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "test_n6")
@@ -9,25 +9,20 @@ when contact.quiz_post_module5_complete_ == false and contact.contact_module == 
 
 ```
 
-<!-- { section: "08eb608e-e78f-4f18-b05f-664c0cb81ed1", x: -816, y: 0} -->
+<!-- { section: "8bc9b2e0-cb9a-4b33-aa48-076bc9c44fb6", x: -672, y: 192} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "ce4d4fb3-307d-4af4-aceb-29de1c54d436",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_narrative_quiz_postmod5", "es", [],
-      buttons: ["¡Cuéntame más!"]
-    )
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "2d4a8508-0118-4b16-a473-28997edc00eb",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module5_started", "yes")
+  then(Template_1)
 end
 
 ```
 
-<!-- { section: "cba701b0-fbc0-4610-aad6-d7f000cc1c3f", x: 1392, y: 0} -->
+<!-- { section: "2c7609f2-bc71-4ef5-b657-0c6d81df95c7", x: 1320, y: 192} -->
 
 ```stack
 card Message_2, "Message_2",
@@ -41,13 +36,14 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "¡Genial!")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "1a79d32b-7243-4592-bc29-26b77a4e8cc8", x: -48, y: -288} -->
+<!-- { section: "9ef9bc50-e9cc-4ef0-80b7-d2e63b004308", x: -120, y: -120} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -60,7 +56,7 @@ end
 
 ```
 
-<!-- { section: "0b2b8f89-82c9-4fde-a716-f133fff839f9", x: 1392, y: -672} -->
+<!-- { section: "6fad3a3c-7b56-4623-93df-1a3f8de6df08", x: 1296, y: -144} -->
 
 ```stack
 card Catch_all_2, "Catch_all_2",
@@ -409,7 +405,7 @@ card Message_14, "Message_14",
 No puedes amar ni hacer feliz a nadie, mientras nos seas feliz tú. ¡Todo empieza desde la seguridad y el amor propio!"
   )
 
-  then(Profile_6481b5)
+  then(QuizComplete)
 end
 
 ```
@@ -513,19 +509,6 @@ end
 
 ```
 
-<!-- { section: "ce28eb69-65d9-4493-886f-2511abcdcc73", x: 15272, y: -48} -->
-
-```stack
-card Profile_6481b5, "Profile_6481b5",
-  version: "1",
-  uuid: "40d3d02b-8e43-5121-8e76-192a79b75a74",
-  code_generator: "UPDATE_CONTACT" do
-  update_contact(quiz_post_module5_complete_: "true")
-  then(QuizComplete)
-end
-
-```
-
 <!-- { section: "041bab41-4f87-4a05-92e9-c8230b003287", x: 10296, y: -840} -->
 
 ```stack
@@ -535,6 +518,24 @@ card Catch_all_7, "Catch_all_7",
   code_generator: "TEXT_MESSAGE" do
   text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones")
   then(Message_10)
+end
+
+```
+
+<!-- { section: "e2f157dc-9ccc-4717-a603-0c12b811e848", x: -120, y: 192} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "c6c6d012-b6ef-4980-948c-821ab4645549",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_narrative_quiz_postmod5", "es", [],
+      buttons: ["¡Cuéntame más!"]
+    )
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
 end
 
 ```
@@ -561,12 +562,12 @@ end
 
 ```
 
-<!-- { section: "7f8bffce-0ce9-4ccd-82e5-e7e24d99a56a", x: 864, y: 96} -->
+<!-- { section: "239f5148-e268-4dae-93b3-9127a2385531", x: 672, y: 192} -->
 
 ```stack
 card Message1 do
   update_contact(quiz_post_module5_complete_: "false")
-  write_result("quiz_pm5_started", "yes")
+  write_result("template1", "¡Cuéntame más!")
   then(Message_2)
 end
 
@@ -577,7 +578,7 @@ end
 ```stack
 card QuizComplete do
   update_contact(quiz_post_module5_complete_: "true")
-  write_result("quiz_pm1_completed", "yes")
+  write_result("quiz_pm5_completed", "yes")
   then(RunStack_b8be21)
 end
 
