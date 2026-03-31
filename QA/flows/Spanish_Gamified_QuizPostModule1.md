@@ -9,26 +9,15 @@ trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "t
 
 ```
 
-<!-- { section: "bd206fac-2d6b-4b2d-935f-241213bfaa70", x: -216, y: 144} -->
+<!-- { section: "56afa811-df61-4473-a166-1e6d85fc3565", x: -624, y: 96} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "7aac204b-8d9c-4530-82f6-86f3f138019e",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("test_gamified_quizpostmodule1", "spa", [],
-      translated_body_params: [],
-      translated_document: [],
-      translated_header: [],
-      translated_image: [],
-      translated_url: [],
-      translated_video: [],
-      buttons: ["0"]
-    )
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "adc621c0-fc1f-4553-82cc-e1ee875e6368",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module1_started", "yes")
+  then(Template_1)
 end
 
 ```
@@ -47,6 +36,7 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "🤔")
   then(Catch_all_2)
 end
@@ -93,6 +83,7 @@ card Message_3, "Message_3",
       )
     end
 
+  write_result("message_3", ref_Message_3)
   then(Message_4 when ref_Message_3 == "¡Genial!")
   then(Catch_all_3)
 end
@@ -543,7 +534,31 @@ end
 
 ```
 
-<!-- { section: "e8cbe60d-dee3-4432-a24c-346a41c7c671", x: 288, y: 600} -->
+<!-- { section: "003d392b-67ef-4c4d-84d8-df7fdda24bb0", x: 48, y: 96} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "28fb407d-53b1-4f2c-bd83-85efa12b1412",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("test_gamified_quizpostmodule1", "spa", [],
+      translated_body_params: [],
+      translated_document: [],
+      translated_header: [],
+      translated_image: [],
+      translated_url: [],
+      translated_video: [],
+      buttons: ["0"]
+    )
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
+end
+
+```
+
+<!-- { section: "f8ee737a-03ac-44f3-87f5-5cb3919454b9", x: 936, y: 528} -->
 
 **@buhle**
 
@@ -615,7 +630,7 @@ Please update these, the DS note so I added in both code and variable for you to
 
 Also there is an Eng note here, please add it too, I have put them both in the next note -->
 
-Update contact field, contact
+Update contact field, contact\
 module : Quiz post module 1 ✅
 
 DS note: Flow result: quiz_pm1_completed (yes)
@@ -694,7 +709,7 @@ end
 
 ```stack
 card Message1 do
-  write_result("quiz_pm1_started", "yes")
+  write_result("template1", "¡Cuéntame más!")
   then(Message_2)
 end
 

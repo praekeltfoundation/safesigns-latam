@@ -1,4 +1,4 @@
-<!-- { section: "651f2225-1379-4c1b-8ec6-76a699512844", x: -960, y: 24} -->
+<!-- { section: "f90c6541-4845-4262-9d7b-29574698866f", x: -960, y: -72} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED")
@@ -6,7 +6,7 @@ when has_any_exact_phrase(event.message.text.body, ["Ludificado", "Game", "Play"
 
 ```
 
-<!-- { section: "c4a05dd3-2089-4cdc-abc2-f7d0c90081f9", x: -504, y: 24} -->
+<!-- { section: "f793eaf5-43e9-4f09-9e2d-bb18a85be5a9", x: -360, y: -72} -->
 
 ```stack
 card Message_1, "Message_1",
@@ -22,7 +22,7 @@ end
 
 ```
 
-<!-- { section: "1a54e52d-1099-409a-a765-f55abfaab46b", x: 864, y: 0} -->
+<!-- { section: "2b4f3b7d-a3e5-4619-8f19-afd58437e8a4", x: 792, y: -72} -->
 
 ```stack
 card Message_2, "Message_2",
@@ -30,7 +30,7 @@ card Message_2, "Message_2",
   uuid: "9f7ec5da-1d07-583c-8c4e-847caa0447ff",
   code_generator: "TEXT_MESSAGE" do
   text(
-    "Soy un robot, así que no tengas pena ni te preocupes por lo que me digas, ¡tus secretos quedarán guardados entre tú y yo! 🤐"
+    "Soy un robot, no tengas pena ni te preocupes por lo que me digas, ¡tus secretos quedarán guardados entre tú y yo!  🤝"
   )
 
   then(Message_3)
@@ -38,7 +38,7 @@ end
 
 ```
 
-<!-- { section: "c45fe259-c7ba-4861-8aa4-fb4910b10c4c", x: 1368, y: 0} -->
+<!-- { section: "c170cfc3-a360-4d4a-906a-dfcfc3dc368a", x: 1176, y: -72} -->
 
 ```stack
 card Message_3, "Message_3",
@@ -52,13 +52,14 @@ card Message_3, "Message_3",
       )
     end
 
+  write_result("message_3", ref_Message_3)
   then(Message_4 when ref_Message_3 == "Entendido 🌸")
   then(Catch_all_1)
 end
 
 ```
 
-<!-- { section: "c1d839e7-3019-4961-adbd-17b637dd07f9", x: 1464, y: -624} -->
+<!-- { section: "7679760e-40bd-4b8f-bf4b-806b3707b868", x: 1176, y: -432} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -71,7 +72,7 @@ end
 
 ```
 
-<!-- { section: "b77aebaa-094e-4f12-95eb-768593154757", x: 1968, y: 0} -->
+<!-- { section: "e19ac4dd-c5ce-44e8-81db-2d32456319c2", x: 1680, y: -72} -->
 
 ```stack
 card Message_4, "Message_4",
@@ -85,13 +86,14 @@ card Message_4, "Message_4",
       )
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "Entendido 🌸")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "90dafd4c-faf4-49b3-a292-efc8d34713ee", x: 1968, y: -648} -->
+<!-- { section: "4650558f-344c-40d1-af40-cdbee0bf63ab", x: 1680, y: -432} -->
 
 ```stack
 card Catch_all_2, "Catch_all_2",
@@ -104,7 +106,7 @@ end
 
 ```
 
-<!-- { section: "bf1429a4-c16f-476c-aaed-ff595524d165", x: 2544, y: 0} -->
+<!-- { section: "84787207-98fe-49a1-9af6-db27ea17d18b", x: 2544, y: -72} -->
 
 ```stack
 card Message_5, "Message_5",
@@ -114,17 +116,18 @@ card Message_5, "Message_5",
   ref_Message_5 =
     buttons(["¡Cuéntame más! 🎧"]) do
       text(
-        "Durante los próximos 6 días, escucharás el podcast de Pilar y Mar. Cada día, tocarán un tema en específico en el que, a través de audios y preguntas, podremos interactuar y conocer mucho más sobre las relaciones románticas. No tardarás más de 10 minutos al día ⏱️"
+        "Durante los próximos 6 días, escucharás el podcast de Pilar y Mari. Cada día, tocarán un tema en específico en el que, a través de audios y preguntas, podremos interactuar y conocer mucho más sobre las relaciones románticas. No tardarás más de 10 minutos al día ⏱️"
       )
     end
 
+  write_result("message_5", ref_Message_5)
   then(Message_6 when ref_Message_5 == "¡Cuéntame más! 🎧")
   then(Catch_all_3)
 end
 
 ```
 
-<!-- { section: "26e3948f-9137-48db-9ea4-c4ea2ddde172", x: 2568, y: -648} -->
+<!-- { section: "38c27801-7794-4073-a396-7961aaf8d66c", x: 2544, y: -432} -->
 
 ```stack
 card Catch_all_3, "Catch_all_3",
@@ -137,7 +140,7 @@ end
 
 ```
 
-<!-- { section: "a1c5bb78-db77-4790-9efb-d327b1c3953e", x: 3024, y: 72} -->
+<!-- { section: "bdc4e8e8-71ec-48b1-acc7-2249bd19d1f4", x: 3024, y: -72} -->
 
 ```stack
 card Message_6, "Message_6",
@@ -150,7 +153,7 @@ end
 
 ```
 
-<!-- { section: "33c40b04-595e-4a14-889e-6f0679dfb15c", x: 3504, y: 72} -->
+<!-- { section: "36709e9d-9fbe-47dd-ba91-78dd885e99c2", x: 3504, y: -72} -->
 
 ```stack
 card Message_6_1, "Message_6_1",
@@ -162,13 +165,14 @@ card Message_6_1, "Message_6_1",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_6", ref_Message_6_1)
   then(Message_7 when ref_Message_6_1 == "Ya escuché el audio!")
   then(Catch_all_4)
 end
 
 ```
 
-<!-- { section: "af2cafa7-6292-4edd-b282-f38798aaac90", x: 4008, y: 72} -->
+<!-- { section: "2e8f4df0-76dd-42ab-9114-24e9f4c70d9e", x: 4008, y: -72} -->
 
 ```stack
 card Message_7, "Message_7",
@@ -180,17 +184,20 @@ card Message_7, "Message_7",
       text(
         "Pero, antes de empezar, quiero recordarte algo…
 
-Nuestro podcast y nuestras preguntas hablan de la vida diaria. Pero si hay algo de lo que hablan Pilar y Mari o alguna pregunta te llega a hacer sentir incómoda, puedes cerrar la conversación. ¡Para nosotras, lo más importante es que te sientas bien!"
+Nuestro podcast y nuestras preguntas hablan de la vida diaria. Pero si hay algo de lo que hablan Pilar y Mari o alguna pregunta te llega a hacer sentir incómoda, puedes cerrar la conversación. ¡Para nosotras, lo más importante es que te sientas bien!
+
+Si sientes que necesitas ayuda o quieres hablar con alguien, envía la palabra \"ayuda\" en cualquier momento."
       )
     end
 
+  write_result("message_7", ref_Message_7)
   then(Message_8 when ref_Message_7 == "Entendido 🌸")
   then(Catch_all_5)
 end
 
 ```
 
-<!-- { section: "755c76ca-bf0d-4cbb-92e6-2d4d5807dff8", x: 3336, y: -672} -->
+<!-- { section: "0585e085-889a-49c6-a840-1888562e0955", x: 3504, y: -432} -->
 
 ```stack
 card Catch_all_4, "Catch_all_4",
@@ -203,7 +210,7 @@ end
 
 ```
 
-<!-- { section: "7e933b59-e095-4c85-acbc-37cef69fff9a", x: 4008, y: -696} -->
+<!-- { section: "1eec3404-e4fd-4a3c-95d9-9814689c2aff", x: 4008, y: -432} -->
 
 ```stack
 card Catch_all_5, "Catch_all_5",
@@ -216,7 +223,7 @@ end
 
 ```
 
-<!-- { section: "9a940804-78f2-45d6-a3c6-0222b2f9df2c", x: 4560, y: 0} -->
+<!-- { section: "7ad6ac15-9102-4f8c-b37d-c01c54116322", x: 4560, y: -72} -->
 
 ```stack
 card Message_8, "Message_8",
@@ -230,7 +237,7 @@ end
 
 ```
 
-<!-- { section: "896109c4-4988-4cfa-9ab2-5942cde2d105", x: 5592, y: 24} -->
+<!-- { section: "ab7976f0-1c93-40f5-9b4a-1b214fcd8ef5", x: 5592, y: -72} -->
 
 ```stack
 card Message_9, "Message_9",
@@ -242,14 +249,14 @@ card Message_9, "Message_9",
       text("¿Entendí bien que puedo llamarte @contact.name? 👀")
     end
 
-  then(Message_11 when ref_Message_9 == "Sí ✅")
+  then(Insight_1 when ref_Message_9 == "Sí ✅")
   then(Message_10 when ref_Message_9 == "No ❌")
   then(Catch_all_6)
 end
 
 ```
 
-<!-- { section: "925af20c-02fe-4380-a7cd-83a913b6922e", x: 5640, y: -768} -->
+<!-- { section: "62da57d5-fc60-429b-ad0a-abe089b41a49", x: 5592, y: -336} -->
 
 ```stack
 card Catch_all_6, "Catch_all_6",
@@ -262,7 +269,7 @@ end
 
 ```
 
-<!-- { section: "20dbf338-ba8d-4d9b-a6f3-e61cb253cb1a", x: 4872, y: 600} -->
+<!-- { section: "29f4174e-714c-4611-8db2-3f3fbfd87dd2", x: 5592, y: 432} -->
 
 ```stack
 card Message_10, "Message_10",
@@ -278,80 +285,7 @@ end
 
 ```
 
-<!-- { section: "ac0ac527-20e4-4269-bef5-5814cb5432a5", x: 6216, y: 72} -->
-
-```stack
-card Message_11, "Message_11",
-  version: "1",
-  uuid: "c1150661-f277-52ed-8552-5bdd4fec91b5",
-  code_generator: "QUESTION" do
-  ref_Message_11 = ask("¿Puedes escribir tu número de tarjeta de identidad?")
-  then(IDCard)
-end
-
-```
-
-<!-- { section: "ea821f0b-2c27-4480-9fbd-96e971909e2f", x: 7344, y: 0} -->
-
-```stack
-card Message_12, "Message_12",
-  version: "1",
-  uuid: "ff7a633a-e913-5416-be74-9c2b279e6491",
-  code_generator: "REPLY_BUTTON_TEXT" do
-  ref_Message_12 =
-    buttons(["Si ✅", "No ❌"]) do
-      text("¿Entendí bien que tu número de tarjeta de identidad es @contact.idcard? 👀")
-    end
-
-  then(Message_14 when ref_Message_12 == "Si ✅")
-  then(Message_13 when ref_Message_12 == "No ❌")
-  then(Catch_all_7)
-end
-
-```
-
-<!-- { section: "7df556bd-7f55-450d-a811-acbadc3fa2f1", x: 7272, y: -672} -->
-
-```stack
-card Catch_all_7, "Catch_all_7",
-  version: "1",
-  uuid: "41a6a70c-2236-5c31-8025-51c95fb6765f",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones")
-  then(Message_12)
-end
-
-```
-
-<!-- { section: "16c3b765-8bb8-4976-b338-e22fea03bffc", x: 6960, y: 576} -->
-
-```stack
-card Message_13, "Message_13",
-  version: "1",
-  uuid: "e9f2a183-4f31-505d-828d-a00cf6ed37b2",
-  code_generator: "QUESTION" do
-  ref_Message_13 =
-    ask("¡Vamos a intentarlo de nuevo! Escribe el número de tu tarjeta de identidad 🤩")
-
-  then(IDCard)
-end
-
-```
-
-<!-- { section: "3c5d86ae-b7ff-4457-a49b-5ee2933b8281", x: 7992, y: 144} -->
-
-```stack
-card Message_14, "Message_14",
-  version: "1",
-  uuid: "c18ddaee-a707-51d7-b0f4-d49666081a9d",
-  code_generator: "TEXT_MESSAGE" do
-  text("Encantada de conocerte, @contact.name😜")
-  then(Message14)
-end
-
-```
-
-<!-- { section: "9a7f3b95-d5ae-4d00-8885-c636edfef0ce", x: 9216, y: 96} -->
+<!-- { section: "47b23c74-c349-4ebf-ada3-1de79628fc46", x: 7968, y: -72} -->
 
 ```stack
 card Message_15, "Message_15",
@@ -361,17 +295,18 @@ card Message_15, "Message_15",
   ref_Message_15 =
     buttons(["Vamos ✅"]) do
       text(
-        "¿Lista para escuchar el podcast de Pilar y Mar? Acompáñame a escucharlas durante esta semana ❤️"
+        "¿Lista para escuchar el podcast de Pilar y Mari? Acompáñame a escucharlas durante esta semana ❤️"
       )
     end
 
+  write_result("message_15", ref_Message_15)
   then(RunStack_65436a when ref_Message_15 == "Vamos ✅")
   then(Catch_all_8)
 end
 
 ```
 
-<!-- { section: "4d6c9cdd-86d3-4a32-974a-410ab72e08a9", x: 9888, y: 96} -->
+<!-- { section: "aff41eaa-a050-495f-bc9f-fe4580c05cea", x: 8376, y: -72} -->
 
 ```stack
 card RunStack_65436a, "RunStack_65436a",
@@ -383,7 +318,7 @@ end
 
 ```
 
-<!-- { section: "5374b6b6-1c8d-4484-801a-9406ea2e49fb", x: 9264, y: -624} -->
+<!-- { section: "6011a6d2-41a3-4f60-b6bf-a5d8c2b0baff", x: 7968, y: -264} -->
 
 ```stack
 card Catch_all_8, "Catch_all_8",
@@ -396,7 +331,7 @@ end
 
 ```
 
-<!-- { section: "e5d6530c-9aea-42d8-b700-00dc6580a1a8", x: 4992, y: -24} -->
+<!-- { section: "bf7004a5-8588-42f2-afe1-79490424f69a", x: 4992, y: -72} -->
 
 ```stack
 card Profile_5651c6, "Profile_5651c6",
@@ -409,7 +344,7 @@ end
 
 ```
 
-<!-- { section: "d0e5529b-6556-487f-966b-169f9bc41084", x: 4968, y: 168} -->
+<!-- { section: "ef632cda-b423-46ee-813f-90a2e2bee2d2", x: 4992, y: 168} -->
 
 ```stack
 card Profile_5259a4, "Profile_5259a4",
@@ -422,68 +357,62 @@ end
 
 ```
 
-<!-- { section: "aa667a47-a1bd-4484-9b62-083591d25d7e", x: 0, y: 552} -->
+<!-- { section: "bf891f1f-79f6-4fb0-97d1-285655ae0d4d", x: 6120, y: -72} -->
 
-arm = gamified
+```stack
+card Insight_1, "Insight_1",
+  version: "1",
+  uuid: "0cca68d1-d82d-4a0d-907b-2297fd59c043",
+  code_generator: "WRITE_RESULTS" do
+  write_result("message_9", "Sí ✅")
+  then(Profile_1)
+end
 
-<!-- { section: "5e5f4d5d-3d87-426a-a490-2eeba330342b", x: 0, y: 480} -->
+```
 
-onboarding_complete = no
+<!-- { section: "503335ce-de1b-4667-a84f-fdd63c6bfe73", x: 7536, y: -72} -->
 
-<!-- { section: "92504105-750b-4af4-bb66-41672e4a7187", x: 336, y: 576} -->
+```stack
+card Message_14, "Message_14",
+  version: "1",
+  uuid: "a6caef9b-7e01-45ad-836f-5725130a9054",
+  code_generator: "TEXT_MESSAGE" do
+  text("Encantada de conocerte,  @contact.name 😜")
+  then(Message_15)
+end
 
-**DS note:**
+```
 
-Contact field: arm (gamified)
+<!-- { section: "d011d7f5-0a62-4a5d-ab88-d430ce7018b2", x: 6552, y: -72} -->
 
-Flow result: onboarding_started (yes)
+```stack
+card Profile_1, "Profile_1",
+  version: "1",
+  uuid: "6dda7bb0-8d74-4bc2-9e4a-a0a3c0d12189",
+  code_generator: "UPDATE_CONTACT" do
+  update_contact(onboarding_complete: "true")
+  then(Message14)
+end
 
-<!-- { section: "4b317231-b93d-4acd-b881-0d39bbe79167", x: 672, y: 576} -->
+```
 
-link this in to the above flow when done & dlt this note
+<!-- { section: "e320a447-dc2c-4430-bb35-929b8fcb1192", x: 3960, y: 552} -->
 
-<!-- { section: "86c128ba-3ec1-4343-9578-9f43468cf125", x: 6264, y: 432} -->
+Sentence added here:
 
-**@Eng we need a check here**
+EN
 
-The LATAM ID number has 10 numbers, please set up a check here to confirm that the id they have given us is valid.
+If you feel you need help or want to talk to someone, send the word “help” at any time.
 
-Use code block below if needed, if not please delete it
+ES
 
-<!-- { section: "6e55721a-8cc5-4d0d-801d-ed6d56817ecb", x: 8448, y: 408} -->
+Si sientes que necesitas ayuda o quieres hablar con alguien, envía la palabra "ayuda" en cualquier momento.
 
-**@Buhle**
+<!-- { section: "ca197936-ed75-44c2-be50-5ba8e7e9eba8", x: 3960, y: 840} -->
 
-Update contact field:
-onboarding_completed =yes**
+Content master location:
 
-DS note:**
-
-~~Contact field: id_card {user input}~~
-
-Flow result: onboarding_completed (yes)
-
-**@Tam**
-
-Is this different from the idcard that we are using for updating contact field after user validation? **Contact field: id_card {user input} ✅**
-
-<!-- { section: "b3625884-adf4-4079-9011-b6a68dd406dd", x: 0, y: 336} -->
-
-**@Buhle**
-
-please do these, I added a code block for you here just in case
-
-<!-- { section: "9789a6fa-9545-4419-8e34-535fa75c1be5", x: 4632, y: 408} -->
-
-**@Buhle**
-
-save user name / input here
-
-<!-- { section: "476d5837-dfb8-472b-a53c-e1e80101ace2", x: 6264, y: 312} -->
-
-**@Buhle** save user input here
-
-(Validate 10 digits here for ID number)
+https://docs.google.com/spreadsheets/d/1WNTGH41dwU7p26Ssr3r6Mx_x2T2Gtgr9/edit?gid=214569828#gid=214569828&range=D15
 
 <!-- { section: "12773617-e5b8-4725-8e66-69292704c92f", x: 192, y: -72} -->
 
@@ -497,40 +426,13 @@ end
 
 ```
 
-<!-- { section: "cdceeee7-2b44-4864-98fa-4e0653966947", x: 6792, y: -72} -->
-
-```stack
-card IDCard
-     when isnumber(@ref_message_11) and
-            len(@ref_message_11) == 10 and
-            is_nil_or_empty(@ref_message_13) do
-  log("ID updated to @ref_message_11 from message 11")
-  update_contact(idcard: "@ref_message_11")
-  then(Message_12)
-end
-
-card IDCard
-     when isnumber(@ref_message_13) and
-            len(@ref_message_13) == 10 do
-  log("ID updated to @ref_message_13 from message 13")
-  update_contact(idcard: "@ref_message_13")
-  then(Message_12)
-end
-
-card IDCard do
-  log("Incorrect ID")
-  then(Message_13)
-end
-
-```
-
-<!-- { section: "6ad60ddc-1454-4064-914d-ed080284f454", x: 8520, y: 48} -->
+<!-- { section: "a81353b5-96ab-47a5-9422-859b12b2f907", x: 6984, y: -72} -->
 
 ```stack
 card Message14 do
   update_contact(onboarding_complete: "true")
   write_result("onboarding_completed", "yes")
-  then(Message_15)
+  then(Message_14)
 end
 
 ```

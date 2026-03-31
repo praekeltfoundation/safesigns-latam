@@ -1,4 +1,4 @@
-<!-- { section: "f8a695ab-7b62-499e-ba95-3426b5d40978", x: -1896, y: -192} -->
+<!-- { section: "9d8e7b63-c5a1-4c1d-9e10-8b96dc2255d4", x: -1896, y: -144} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED")
@@ -28,7 +28,7 @@ end
 
 ```
 
-<!-- { section: "5aa51722-4a89-40f4-bba5-2800866e181a", x: 912, y: 0} -->
+<!-- { section: "5f8837bf-8d6e-456e-8700-b54243646412", x: 912, y: -144} -->
 
 ```stack
 card Message_2, "Message_2",
@@ -36,7 +36,7 @@ card Message_2, "Message_2",
   uuid: "9f7ec5da-1d07-583c-8c4e-847caa0447ff",
   code_generator: "TEXT_MESSAGE" do
   text(
-    "Soy un robot, no tengas pena ni te preocupes por lo que me digas, ¡tus secretos quedarán guardados entre tú y yo! 🤐"
+    "Soy un robot, no tengas pena ni te preocupes por lo que me digas, ¡tus secretos quedarán guardados entre tú y yo!  🤝"
   )
 
   then(Message_3)
@@ -44,7 +44,7 @@ end
 
 ```
 
-<!-- { section: "2329078f-486d-41ce-9492-d1c0e1d1e45d", x: 1464, y: 0} -->
+<!-- { section: "b4fd5d4e-8393-42fc-a171-4605b0d82157", x: 1464, y: -144} -->
 
 ```stack
 card Message_3, "Message_3",
@@ -58,13 +58,14 @@ card Message_3, "Message_3",
       )
     end
 
+  write_result("message_3", ref_Message_3)
   then(Message_4 when ref_Message_3 == "Entendido 🌸")
   then(Catch_all_1)
 end
 
 ```
 
-<!-- { section: "c1d839e7-3019-4961-adbd-17b637dd07f9", x: 1464, y: -624} -->
+<!-- { section: "c51d549f-4c46-4170-aaf4-66a3f5fa15a3", x: 1464, y: -360} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -77,7 +78,7 @@ end
 
 ```
 
-<!-- { section: "b77aebaa-094e-4f12-95eb-768593154757", x: 1968, y: 0} -->
+<!-- { section: "5ddca3ef-ce64-44aa-9619-d8189ead7d84", x: 1968, y: -144} -->
 
 ```stack
 card Message_4, "Message_4",
@@ -87,17 +88,18 @@ card Message_4, "Message_4",
   ref_Message_4 =
     buttons(["Cuéntame"]) do
       text(
-        "Por los próximos 6 días, te iré contando la inquietante historia de Pilar, una chica a la que le acaba de ocurrir algo que nunca se imaginó… Cada día, habrá un episodio que te iré contando a través de audios para aprender juntas. No te tomará más de 10 minutos al día ⏱️"
+        "Por los próximos 6 días, te iré contando la inquietante historia de Pilar, una chica a la que le acaba de ocurrir algo que nunca se imaginó… Cada día, habrá un episodio que te compartiré a través de audios para aprender juntas. No te tomará más de 10 minutos al día ⏱️"
       )
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "Cuéntame")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "90dafd4c-faf4-49b3-a292-efc8d34713ee", x: 1968, y: -648} -->
+<!-- { section: "6f9f55cb-8334-44ae-a6b6-e08ec347f95a", x: 1968, y: -360} -->
 
 ```stack
 card Catch_all_2, "Catch_all_2",
@@ -110,7 +112,7 @@ end
 
 ```
 
-<!-- { section: "bf1429a4-c16f-476c-aaed-ff595524d165", x: 2544, y: 0} -->
+<!-- { section: "5f8f8646-d3bd-4b52-8651-6c9a9eb26eb3", x: 2544, y: -144} -->
 
 ```stack
 card Message_5, "Message_5",
@@ -122,17 +124,20 @@ card Message_5, "Message_5",
       text(
         "Pero antes de empezar, quiero recordarte algo…
 
-La historia de Pilar y mis preguntas hablan de la vida diaria. Pero si hay algo de lo que hable la historia o alguna pregunta te llega a hacer sentir incómoda, puedes cerrar la conversación. ¡Para mí es muy importante que te sientas bien!"
+La historia de Pilar y mis preguntas hablan de la vida diaria. Pero si hay algo de lo que hable la historia o alguna pregunta te llega a hacer sentir incómoda, puedes cerrar la conversación. ¡Para mí es muy importante que te sientas bien!
+
+Si sientes que necesitas ayuda o quieres hablar con alguien, envía la palabra \"ayuda\" en cualquier momento."
       )
     end
 
+  write_result("message_5", ref_Message_5)
   then(Message_6 when ref_Message_5 == "Entendido 🌸")
   then(Catch_all_3)
 end
 
 ```
 
-<!-- { section: "26e3948f-9137-48db-9ea4-c4ea2ddde172", x: 2568, y: -648} -->
+<!-- { section: "7bbd3524-f865-447c-80cd-04bed8ff3bbc", x: 2544, y: -360} -->
 
 ```stack
 card Catch_all_3, "Catch_all_3",
@@ -171,7 +176,7 @@ card Message_7, "Message_7",
       text("¿Entendí bien que puedo llamarte @contact.name? 👀")
     end
 
-  then(Message_9 when ref_Message_7 == "Sí ✅")
+  then(Insight_1 when ref_Message_7 == "Sí ✅")
   then(Message_8 when ref_Message_7 == "No ❌")
   then(Catch_all_6)
 end
@@ -207,67 +212,7 @@ end
 
 ```
 
-<!-- { section: "9238d153-ecbc-4b2b-9c89-8c69393f20ce", x: 5184, y: 96} -->
-
-```stack
-card Message_9, "Message_9",
-  version: "1",
-  uuid: "3bfae072-3443-5819-b544-830334fa1fe0",
-  code_generator: "QUESTION" do
-  ref_Message_9 = ask("¿Puedes escribir tu número de tarjeta de identidad?")
-  then(IDCard)
-end
-
-```
-
-<!-- { section: "69a83175-5d3c-42cf-a1fc-9712d0e74ba9", x: 6432, y: 96} -->
-
-```stack
-card Message_10, "Message_10",
-  version: "1",
-  uuid: "f2c0c14d-6e2f-503c-b326-7af1749d8bb5",
-  code_generator: "REPLY_BUTTON_TEXT" do
-  ref_Message_10 =
-    buttons(["Sí  ✅", "No ❌"]) do
-      text("¿Entendí bien que tu número de tarjeta de identidad es  @contact.idcard? 👀")
-    end
-
-  then(Message14 when ref_Message_10 == "Sí  ✅")
-  then(Message_11 when ref_Message_10 == "No ❌")
-  then(Catch_all_7)
-end
-
-```
-
-<!-- { section: "dd4a8add-a9ce-4e04-9ef1-8c7d36670fb7", x: 6480, y: -456} -->
-
-```stack
-card Catch_all_7, "Catch_all_7",
-  version: "1",
-  uuid: "41a6a70c-2236-5c31-8025-51c95fb6765f",
-  code_generator: "TEXT_MESSAGE" do
-  text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones.")
-  then(Message_10)
-end
-
-```
-
-<!-- { section: "7faebcbf-350d-4758-8c60-0397ba50c47d", x: 5760, y: 744} -->
-
-```stack
-card Message_11, "Message_11",
-  version: "1",
-  uuid: "c1150661-f277-52ed-8552-5bdd4fec91b5",
-  code_generator: "QUESTION" do
-  ref_Message_11 =
-    ask("¡Vamos a intentarlo de nuevo! Escribe el número de tu tarjeta de identidad 🤩")
-
-  then(IDCard)
-end
-
-```
-
-<!-- { section: "4815cdc0-e2af-446b-ae4d-9d3b0262a777", x: 8040, y: 216} -->
+<!-- { section: "0a42c02f-71c1-4570-8f98-d764ae92adec", x: 7152, y: 120} -->
 
 ```stack
 card Message_12, "Message_12",
@@ -280,7 +225,7 @@ end
 
 ```
 
-<!-- { section: "8cea85b5-f215-43fa-84fa-cdffc7e13100", x: 8688, y: 216} -->
+<!-- { section: "98949ea0-d840-44c2-b18b-ea5db484a924", x: 7680, y: 120} -->
 
 ```stack
 card Message_13, "Message_13",
@@ -294,13 +239,13 @@ card Message_13, "Message_13",
       )
     end
 
-  then(Profile_0bf81d when ref_Message_13 == "Vamos ✅")
+  then(Insight_2 when ref_Message_13 == "Vamos ✅")
   then(Catch_all_8)
 end
 
 ```
 
-<!-- { section: "214ae553-f7b8-44f1-836f-321e053d4c42", x: 10008, y: 264} -->
+<!-- { section: "ce86a6fa-f8b4-4e9a-956e-12438720a61e", x: 8856, y: 120} -->
 
 ```stack
 card RunStack_65436a, "RunStack_65436a",
@@ -312,7 +257,7 @@ end
 
 ```
 
-<!-- { section: "f2331a9d-9f68-4281-9779-1f3ca13d59c6", x: 8784, y: -576} -->
+<!-- { section: "b95ac7dd-f79f-4393-bca3-ca25a3dfdde4", x: 7680, y: -96} -->
 
 ```stack
 card Catch_all_8, "Catch_all_8",
@@ -325,7 +270,7 @@ end
 
 ```
 
-<!-- { section: "e5081ad4-76e9-41e9-b97d-9b5d96795444", x: 9336, y: 264} -->
+<!-- { section: "4dc46c5f-91f1-479d-8f20-65cc9c4d4552", x: 5928, y: 120} -->
 
 ```stack
 card Profile_0bf81d, "Profile_0bf81d",
@@ -333,7 +278,7 @@ card Profile_0bf81d, "Profile_0bf81d",
   uuid: "0e76525e-bc05-5ef7-b8ec-917d6bdc9342",
   code_generator: "UPDATE_CONTACT" do
   update_contact(onboarding_complete: "true")
-  then(RunStack_65436a)
+  then(Message14)
 end
 
 ```
@@ -364,104 +309,51 @@ end
 
 ```
 
-<!-- { section: "86fdecd1-eeb7-476e-96a4-43c2a698ac20", x: -312, y: 360} -->
-
-Update contact field,
-
-arm = narrative ✅
-
-<!-- { section: "79a613a3-728b-4733-946f-4b97e279575d", x: 24, y: 384} -->
-
-Update contact field,
-
-onboarding_complete = no ✅
-
-<!-- { section: "b7e3df42-06c2-45b5-a6bb-2e96b8ed4cd9", x: 480, y: 192} -->
-
-**@Buhle**
-
-Please add this in**
-
-DS note:**
-
-Contact field: arm (gamified)
-
-Flow result: onboarding_started (yes)
-
-<!-- { section: "d7e4f69f-7c86-4c5f-8955-ff75c648e879", x: 456, y: 456} -->
-
-link this in to the above flow when done & dlt this note
-
-<!-- { section: "095a7ed9-50f9-447e-911e-9dd066bbe38d", x: 5160, y: 504} -->
-
-**@Eng we need a check here**
-
-The LATAM ID number has 10 numbers, please set up a check here to confirm that the id they have given us is valid.
-
-Use code block below if needed, if not please delete it
-
-<!-- { section: "187f1232-1965-4a3b-bcab-c22aee80e776", x: 5160, y: 360} -->
-
-**@Buhle**
-
-We need to save the users input here, @Eng please double check this is correct
-
-<!-- { section: "cd02770b-ad3f-4ec5-9c68-e10b1c30cbea", x: 6840, y: 552} -->
-
-**@Buhle**
-
-We have a DS thing here as well, I added bot in for you, not sure which you need
-**
-
-DS note:**
-
-Contact field: id_card {user input}
-
-Flow result: onboarding_completed (yes)
-
-<!-- { section: "6cd60465-3d98-4748-9bee-f453c0e36378", x: 1512, y: 408} -->
-
-Emoji missing here
-
-<!-- { section: "86adb008-ef2f-4fb0-9951-b28af1c78317", x: 4008, y: 672} -->
-
-**@Buhle,**
-
-Please save users name/input
-
-<!-- { section: "30e6512d-1ccc-4f2d-893f-b596f3b2560f", x: 9336, y: 480} -->
-
-Update contact field:
-onboarding_completed =yes ✅
-
-<!-- { section: "4f4a6ba9-139e-4cd9-8d6d-6b21c908e020", x: 5784, y: 0} -->
+<!-- { section: "84da74bf-6e38-44e9-a5c3-94716d585cc4", x: 4800, y: 120} -->
 
 ```stack
-card IDCard
-     when isnumber(@ref_message_9) and
-            len(@ref_message_9) == 10 and
-            is_nil_or_empty(@ref_message_13) do
-  log("ID updated to @ref_message_9 from message 9")
-  update_contact(idcard: "@ref_message_9")
-  then(Message_10)
-end
-
-card IDCard
-     when isnumber(@ref_message_11) and
-            len(@ref_message_11) == 10 do
-  log("ID updated to @ref_message_11 from message 11")
-  update_contact(idcard: "@ref_message_11")
-  then(Message_10)
-end
-
-card IDCard do
-  log("Incorrect ID")
-  then(Message_11)
+card Insight_1, "Insight_1",
+  version: "1",
+  uuid: "0c3f71ad-24e8-4eb5-9bf4-fbf335a85172",
+  code_generator: "WRITE_RESULTS" do
+  write_result("message_7", "Sí ✅")
+  then(Profile_0bf81d)
 end
 
 ```
 
-<!-- { section: "0181c192-473e-41f2-a6e2-1a94db19e6a7", x: 7200, y: 96} -->
+<!-- { section: "80bd8d85-2587-49c1-a337-216d7b2a12fc", x: 8280, y: 120} -->
+
+```stack
+card Insight_2, "Insight_2",
+  version: "1",
+  uuid: "ba7428d0-d27c-4b22-8f44-cc247f1b48f0",
+  code_generator: "WRITE_RESULTS" do
+  write_result("message_13", "Vamos ✅")
+  then(RunStack_65436a)
+end
+
+```
+
+<!-- { section: "ae5ffa7e-14f1-4a45-b350-0f36db3e3195", x: 2496, y: 432} -->
+
+Sentence added here:
+
+ES
+
+Si sientes que necesitas ayuda o quieres hablar con alguien, envía la palabra "ayuda" en cualquier momento.
+
+ENG
+
+If you feel you need help or want to talk to someone, send the word “help” at any time.
+
+<!-- { section: "0436c563-47e1-42dc-a749-0b8e9abb4561", x: 2496, y: 720} -->
+
+Content Master location:
+
+https://docs.google.com/spreadsheets/d/14JAmTFuQ8fX4kSq18ETyNOZ3jzjjCykP/edit?gid=356471774#gid=356471774&range=E9
+
+<!-- { section: "0c79997b-9821-4624-aa32-132a068ad6fc", x: 6456, y: 120} -->
 
 ```stack
 card Message14 do
@@ -496,6 +388,5 @@ end
 
 ```stack
 interaction_timeout(300)
-ai_auto_memory(false)
 
 ```

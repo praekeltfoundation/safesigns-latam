@@ -1,4 +1,4 @@
-<!-- { section: "1b06a583-547a-44ce-918c-bd8b571e4b39", x: -552, y: 72} -->
+<!-- { section: "071b0a88-6e8b-41a0-addb-ce9d4cf18b06", x: -912, y: -24} -->
 
 ```stack
 trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "test_g5")
@@ -9,18 +9,15 @@ when contact.contact_module == "MODULE_4" and contact.arm == "GAMIFIED" and
 
 ```
 
-<!-- { section: "48210efc-91bb-45d3-ad14-bbfc5e36d85e", x: -24, y: -24} -->
+<!-- { section: "92850b6b-ba0b-4406-9c63-0a5906929f91", x: -552, y: -24} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "14754edd-bfde-491f-9b5a-0ebe120080c6",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_gamified_mod5", "es", [], buttons: ["¡Cuentame más!"])
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_22)
+  uuid: "6a15b86b-3a0d-4d53-b04e-13bf3a86542c",
+  code_generator: "WRITE_RESULTS" do
+  write_result("module5_started", "yes")
+  then(Template_1)
 end
 
 ```
@@ -103,6 +100,7 @@ card Message_4, "Message_4",
       text("Recuerda que, entre más larga tu racha, ¡más stickers vas acumulando!")
     end
 
+  write_result("message_4", ref_Message_4)
   then(Message_5 when ref_Message_4 == "Vale 👍")
   then(Catch_all_2)
 end
@@ -152,6 +150,7 @@ card Message_6, "Message_6",
       )
     end
 
+  write_result("message_6", ref_Message_6)
   then(Message_7 when ref_Message_6 == "Ok 👌")
   then(Catch_all_3)
 end
@@ -196,6 +195,7 @@ card Message_8, "Message_8",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_8", ref_Message_8)
   then(Message_9 when ref_Message_8 == "Ya escuché el audio")
   then(Catch_all_4)
 end
@@ -260,6 +260,7 @@ card Message_11, "Message_11",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_11", ref_Message_11)
   then(Message_12 when ref_Message_11 == "Ya escuché el audio!")
   then(Catch_all_5)
 end
@@ -378,6 +379,7 @@ card Message_14, "Message_14",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_14", ref_Message_14)
   then(Message_15 when ref_Message_14 == "Ya escuché el audio!")
   then(Catch_all_9)
 end
@@ -450,6 +452,7 @@ card Message_16_1, "Message_16_1",
       )
     end
 
+  write_result("message_16", ref_Message_16_1)
   then(Message_17 when ref_Message_16_1 == "Siguiente pregunta")
   then(Catch_all_11)
 end
@@ -470,6 +473,7 @@ card Message_16_2, "Message_16_2",
       )
     end
 
+  write_result("message_16", ref_Message_16_2)
   then(Message_17 when ref_Message_16_2 == "Siguiente pregunta")
   then(Catch_all_12)
 end
@@ -524,7 +528,7 @@ end
 
 ```
 
-<!-- { section: "43f64f95-849f-430c-aaa5-9494964132d8", x: 18360, y: 264} -->
+<!-- { section: "48a117b3-bba3-4d9e-8e12-a5ba6f7e10da", x: 18408, y: 264} -->
 
 ```stack
 card Message_18_1, "Message_18_1",
@@ -540,6 +544,7 @@ En lugar de actuar desde la rabia, considera averiguar primero qué fue lo que p
       )
     end
 
+  write_result("message_18", ref_Message_18_1)
   then(Message_19_1 when ref_Message_18_1 == "Sigue el podcast")
   then(Catch_all_13)
 end
@@ -562,13 +567,14 @@ Investigar la situación y hablar con un adulto de confianza puede ofrecerte cla
       )
     end
 
+  write_result("message_18", ref_Message_18_2)
   then(Message_19_1 when ref_Message_18_2 == "Sigue el podcast")
   then(Catch_all_14)
 end
 
 ```
 
-<!-- { section: "8182c099-1a32-4534-863e-b10ab2ce77b3", x: 18240, y: 2232} -->
+<!-- { section: "7fb7fdda-8f16-41b2-8da1-f016c684dafe", x: 18408, y: 2232} -->
 
 ```stack
 card Message_18_3, "Message_18_3",
@@ -584,13 +590,14 @@ Contar con la experiencia de alguien de confianza puede guiarte para abordar el 
       )
     end
 
+  write_result("message_18", ref_Message_18_3)
   then(Message_19_1 when ref_Message_18_3 == "Sigue el podcast")
   then(Catch_all_15)
 end
 
 ```
 
-<!-- { section: "88913ca9-65a3-4b72-bea9-c625d64e1cd2", x: 17904, y: -696} -->
+<!-- { section: "91283546-c09e-425d-96b7-127a0d6b242a", x: 18408, y: 24} -->
 
 ```stack
 card Catch_all_13, "Catch_all_13",
@@ -603,7 +610,7 @@ end
 
 ```
 
-<!-- { section: "22c57be8-fc18-420f-afe2-1f3f0bc2c87a", x: 18048, y: 912} -->
+<!-- { section: "25be8330-e377-4c4b-ba44-6b50c5e5b5b3", x: 18408, y: 936} -->
 
 ```stack
 card Catch_all_14, "Catch_all_14",
@@ -616,7 +623,7 @@ end
 
 ```
 
-<!-- { section: "6329500f-3f34-4cc0-b7e3-708546635b14", x: 18216, y: 1896} -->
+<!-- { section: "27a168d6-38cf-4849-8dbe-16e73df5aa8b", x: 18408, y: 2016} -->
 
 ```stack
 card Catch_all_15, "Catch_all_15",
@@ -629,7 +636,7 @@ end
 
 ```
 
-<!-- { section: "f13ecfb2-38b0-4c1d-8eef-4dedaae1d453", x: 19608, y: 1032} -->
+<!-- { section: "cc472488-d5a4-42f6-be3f-d39ab5b221ec", x: 19608, y: 1056} -->
 
 ```stack
 card Message_19, "Message_19",
@@ -641,13 +648,14 @@ card Message_19, "Message_19",
       text("Cuando termine el audio, pulsa el botón *Ya escuché el audio*")
     end
 
+  write_result("message_19", ref_Message_19)
   then(Message_20 when ref_Message_19 == "Ya escuché el audio!")
   then(Catch_all_16)
 end
 
 ```
 
-<!-- { section: "4f35b60f-49e4-40ac-971e-0c7604ce70b6", x: 19512, y: 288} -->
+<!-- { section: "eb346cad-7f8a-4aa0-8e49-b3bc6e8f2deb", x: 19608, y: 744} -->
 
 ```stack
 card Catch_all_16, "Catch_all_16",
@@ -660,7 +668,7 @@ end
 
 ```
 
-<!-- { section: "8fdbbf65-f00c-4778-8eb0-b68d5da9ebd7", x: 20040, y: 864} -->
+<!-- { section: "ad4270d5-b42b-4a31-8185-9e40dc3d8cfc", x: 20040, y: 1056} -->
 
 ```stack
 card Message_20, "Message_20",
@@ -679,7 +687,7 @@ end
 
 ```
 
-<!-- { section: "b11f0cf6-03f2-4391-8998-1df6e44473de", x: 21624, y: 1008} -->
+<!-- { section: "cdac1439-cce1-4a86-93fb-4c9bee78a7bb", x: 21624, y: 1056} -->
 
 ```stack
 card Message_21, "Message_21",
@@ -695,7 +703,7 @@ end
 
 ```
 
-<!-- { section: "fef27856-bfc6-432a-b68f-8708aab35313", x: 22104, y: 1008} -->
+<!-- { section: "86531aa8-af0d-460d-a60a-f58f31a63ae4", x: 22104, y: 1056} -->
 
 ```stack
 card Messge_22, "Messge_22",
@@ -709,6 +717,7 @@ card Messge_22, "Messge_22",
       )
     end
 
+  write_result("message_22", ref_Messge_22)
   then(Message_23_sticker_1 when ref_Messge_22 == "¡Manda mis stickers!")
   then(Catch_all_17)
 end
@@ -756,6 +765,7 @@ card Message_24, "Message_24",
       )
     end
 
+  write_result("message_24", ref_Message_24)
   then(Message_25 when ref_Message_24 == "¡Entendido!  🫡")
   then(Catch_all_18)
 end
@@ -799,7 +809,7 @@ end
 
 ```
 
-<!-- { section: "2bc3134b-3b5a-4a4c-b838-2206bc083aad", x: 23904, y: 384} -->
+<!-- { section: "2428fbdf-21b9-4d15-96be-03c0bed52f14", x: 24288, y: 744} -->
 
 ```stack
 card Catch_all_19, "Catch_all_19",
@@ -812,7 +822,7 @@ end
 
 ```
 
-<!-- { section: "52727d6d-e1e0-48b2-a2cd-d32336138c72", x: 27048, y: 984} -->
+<!-- { section: "91c67888-819b-4a45-a718-9d79ffef222c", x: 27048, y: 1056} -->
 
 ```stack
 card Message_26, "Message_26",
@@ -826,6 +836,7 @@ card Message_26, "Message_26",
       )
     end
 
+  write_result("message_26", ref_Message_26)
   then(Message_27 when ref_Message_26 == "Entendido 🌸")
   then(Catch_all_20)
 end
@@ -909,6 +920,7 @@ card Message_13, "Message_13",
       text("Cuando finalice el audio, presione el botón de siguiente pregunta.")
     end
 
+  write_result("message_13", ref_Message_13)
   then(Message_14_1 when ref_Message_13 == "Siguiente pregunta")
   then(Catch_all_7)
 end
@@ -997,7 +1009,7 @@ end
 
 ```
 
-<!-- { section: "890bb6d1-fb6f-43c3-b11b-8bbf9d3af42a", x: 20528, y: 744} -->
+<!-- { section: "4d7c850e-7048-4b7f-a7e8-5f3ba1579e71", x: 20520, y: 1056} -->
 
 ```stack
 card Branch_b1534d, "Branch_b1534d",
@@ -1011,7 +1023,7 @@ end
 
 ```
 
-<!-- { section: "83bb09e1-a6b6-45a9-87c6-cbca78d6ab41", x: 20352, y: 1200} -->
+<!-- { section: "165b8a48-bf20-41a4-8904-0aecc0a140c9", x: 20040, y: 1344} -->
 
 ```stack
 card Text_c844df, "Text_c844df",
@@ -1051,7 +1063,7 @@ end
 
 ```
 
-<!-- { section: "b7774a80-e2da-40f1-b275-6b4f4ce09841", x: 26064, y: 1080} -->
+<!-- { section: "b5746fc9-70fe-4673-be66-13145f02900e", x: 26064, y: 1056} -->
 
 ```stack
 card Safe_Guarding_1, "Safe_Guarding_1",
@@ -1067,25 +1079,26 @@ end
 
 ```
 
-<!-- { section: "8014016a-7806-40e5-84bb-6b4a6734f724", x: 26520, y: 1104} -->
+<!-- { section: "3fc95a0a-f87c-4c41-94c6-e9d7cf42caae", x: 26520, y: 1056} -->
 
 ```stack
 card Safe_Guarding_2, "Safe_Guarding_2",
   version: "1",
   uuid: "be3ce969-d47d-522d-9af4-2579a8212d11",
   code_generator: "TEXT_MESSAGE" do
-  text(
-    "1. Línea Púrpura (WhatsApp): +57 300 7551846 o *Visita aquí* https://www.sdmujer.gov.co/nuestros-servicios/servicios-para-las-mujeres/linea-purpura  
-2. Línea 141 (ICBF) – Atención 24/7
-3. Reporte en Línea: *Te Protejo* https://teprotejocolombia.org/"
-  )
+  text("• Línea MAAD: lineamaad@uniandes.edu.co
 
+• Ombudsperson: ombudsperson@uniandes.edu.co
+
+• Decanatura de Estudiantes: centrodeapoyo@uniandes.edu.co
+
+• Consejerxs MAAD: ombudsperson.uniandes.edu.co/maqd1/consejerxs-maad")
   then(Message_26)
 end
 
 ```
 
-<!-- { section: "2692eed9-91b6-4a81-a03c-c0286f93cbce", x: -24, y: -408} -->
+<!-- { section: "69e03e86-aaf1-4a03-95b6-2904670407e8", x: 24, y: -384} -->
 
 ```stack
 card Catch_all_22, "Catch_all_22",
@@ -1094,6 +1107,22 @@ card Catch_all_22, "Catch_all_22",
   code_generator: "TEXT_MESSAGE" do
   text("No entendí muy bien eso. Por favor, intenta de nuevo usando mis botones")
   then(Template_1)
+end
+
+```
+
+<!-- { section: "36783fc0-45c6-4078-bb62-d8104ebf8a0c", x: 24, y: -24} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "e7655ee5-1162-449d-a9dc-a813ce663ab5",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_gamified_mod5", "es", [], buttons: ["¡Cuentame más!"])
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_22)
 end
 
 ```
@@ -1116,18 +1145,10 @@ emoji does not show up
 
 **@Buhle**
 
-Schedule Quiz Post Module 5 to start next day (6pm ,
+Schedule Quiz Post Module 5 to start next day (6pm ,\
 Time zone is Colombia / Bogota time)
 
 Update contact.next_engagement_time
-
-<!-- { section: "3c4fae1e-40b9-4021-9dcf-6edc046b0aae", x: 528, y: 432} -->
-
-**@buhle**
-
-Please save the DS note here, not sure which block you needed so I gave you both, please dlt the one you dont need and make sure the other is hooked up
-
-DS note: Flow result: module5_started (yes)
 
 <!-- { section: "260a9b54-964b-4520-8d5b-33c25660eb18", x: 6792, y: 408} -->
 
@@ -1145,22 +1166,16 @@ This is a DS field, not sure which you need so you have both
 
 Please save the insights here
 
-<!-- { section: "040d65fb-b09a-472c-b4f2-3023cf398f2f", x: 20760, y: 1368} -->
+<!-- { section: "cd6a53d4-42c7-4f9b-9eb0-8e8fd8fe0266", x: 20712, y: 1440} -->
 
-**@Buhle**
+**@Buhle**\
 Please save the insights here
 
-its a DS thing so added in the code block just in case
+its a DS thing so added in the code block just in case**
 
-**DS note:** Flow result: module5_boundaries2 {user input}
+DS note:** Flow result: module5_boundaries2 {user input}
 
-<!-- { section: "427250ac-6b79-4470-b5e0-a4473c5ab1ac", x: 24192, y: 1560} -->
-
-**@Buhle**
-
-Please save insights here
-
-<!-- { section: "28409272-d414-4a09-92e7-8982da34a1fa", x: 27936, y: 1344} -->
+<!-- { section: "0f5325cb-9216-47d1-89b2-41dec3d4c66a", x: 27912, y: 1344} -->
 
 **@Buhle**
 
@@ -1180,7 +1195,7 @@ Update contact field, contact module = Module 5 ✅
 
 ```stack
 card ModuleCompleted do
-  log("Module 6 Complete")
+  log("Module 5 Complete")
   write_result("module6_completed", "yes")
 
   tomorrow_date = datetime_add(now(), 1, "D")
@@ -1199,13 +1214,13 @@ end
 
 ```stack
 card Message1 do
-  write_result("module5_started", "yes")
+  write_result("template_1", "¡Cuéntame más!")
   then(Message_2)
 end
 
 ```
 
-<!-- { section: "9e5a37aa-008f-45b9-b84d-5538b776a262", x: 21048, y: 960} -->
+<!-- { section: "67340e9b-570e-4ae7-b060-da7747ede61b", x: 21048, y: 1056} -->
 
 ```stack
 card Message20 do
@@ -1345,7 +1360,7 @@ end
 
 ```
 
-<!-- { section: "17e18b06-0176-4790-9e69-263090bd7642", x: 24912, y: 1152} -->
+<!-- { section: "c6cf9cae-42d1-4062-b316-f73f60c398db", x: 24936, y: 1152} -->
 
 ```stack
 card Message27_2 do
@@ -1355,7 +1370,7 @@ end
 
 ```
 
-<!-- { section: "e2fb205f-2c5c-4c0f-aa4e-9476ea66510f", x: 24960, y: 1632} -->
+<!-- { section: "6ae3ab06-c9f9-4f0f-8e62-4be5ab9145fa", x: 24936, y: 1632} -->
 
 ```stack
 card Message27_3 do

@@ -1,4 +1,4 @@
-<!-- { section: "4026af62-9c3a-47fa-946a-85d7790ac2fb", x: -1896, y: -336} -->
+<!-- { section: "9b655f6d-8bfa-47df-b065-6e16a0be976a", x: -1872, y: 72} -->
 
 ```stack
 trigger(interval: "+1m", relative_to: "contact.next_engagement_time")
@@ -9,20 +9,15 @@ trigger(on: "MESSAGE RECEIVED") when has_only_phrase(event.message.text.body, "t
 
 ```
 
-<!-- { section: "9a5122fb-9ad3-4575-a442-38036a383f74", x: -1392, y: -168} -->
+<!-- { section: "5a8489c6-9acc-42b5-af45-adb447357f2d", x: -1296, y: 72} -->
 
 ```stack
-card Template_1, "Template_1",
+card Insight_1, "Insight_1",
   version: "1",
-  uuid: "508b46b2-8c75-4963-9d8b-4e679abefa1a",
-  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
-  ref_Template_1 =
-    send_message_template("spanish_narrative_quiz_postmod3", "es", [],
-      buttons: ["¡Cuéntame más!"]
-    )
-
-  then(Message1 when ref_Template_1.index == 0)
-  then(Catch_all_1)
+  uuid: "f622ab2c-c560-4a81-971e-e4e43072c6aa",
+  code_generator: "WRITE_RESULTS" do
+  write_result("quiz_post_module3_started", "yes")
+  then(Template_1)
 end
 
 ```
@@ -42,13 +37,14 @@ card Message_2, "Message_2",
       )
     end
 
+  write_result("message_2", ref_Message_2)
   then(Message_3 when ref_Message_2 == "¡Genial!")
   then(Catch_all_2)
 end
 
 ```
 
-<!-- { section: "ddf2152b-a504-455e-bde4-df22307bf4b8", x: -888, y: -240} -->
+<!-- { section: "9bc2b827-1ccb-41fe-8e10-df6b43c916a7", x: -792, y: -240} -->
 
 ```stack
 card Catch_all_1, "Catch_all_1",
@@ -415,19 +411,6 @@ card Message_11, "Message_11",
 🚫 No chismear 🙊
 ")
 
-  then(Profile_cc888b)
-end
-
-```
-
-<!-- { section: "8d221601-ce00-40e9-9a24-c1ffa710d430", x: 12896, y: -48} -->
-
-```stack
-card Profile_cc888b, "Profile_cc888b",
-  version: "1",
-  uuid: "6c9e4108-06b1-539c-b887-15c03f4ee84e",
-  code_generator: "UPDATE_CONTACT" do
-  update_contact(quiz_post_module3_complete: "true")
   then(QuizComplete)
 end
 
@@ -441,6 +424,24 @@ card RunStack_0f3d57, "RunStack_0f3d57",
   uuid: "7a995036-825f-5298-9a48-f7f6d0ec7326",
   code_generator: "RUN_STACK" do
   run_stack("ac56ce15-0e35-4f38-9325-570bca675a72")
+end
+
+```
+
+<!-- { section: "453e603d-e17a-4510-904b-41bc1b970ee2", x: -792, y: 72} -->
+
+```stack
+card Template_1, "Template_1",
+  version: "1",
+  uuid: "381570c7-d355-46f9-88ff-a8608c0f1dbc",
+  code_generator: "WHATSAPP_TEMPLATE_MESSAGE" do
+  ref_Template_1 =
+    send_message_template("spanish_narrative_quiz_postmod3", "es", [],
+      buttons: ["¡Cuéntame más!"]
+    )
+
+  then(Message1 when ref_Template_1.index == 0)
+  then(Catch_all_1)
 end
 
 ```
@@ -507,14 +508,6 @@ opt b =
 
 opt c =
 
-<!-- { section: "f35a11c3-6201-4a86-b266-5ccef1561774", x: 456, y: 360} -->
-
-**@Buhle,**
-
-Not sure which was right for the DS note so have both code and save insight here, dlt the one you dont need please.
-
-DS note: Flow result: quiz_pm3_started (yes)
-
 <!-- { section: "73797d95-1a3e-4a1d-934b-a3af283a162b", x: 10944, y: 432} -->
 
 **@buhle**
@@ -522,11 +515,6 @@ DS note: Flow result: quiz_pm3_started (yes)
 Please save the insights here
 
 code block is here if you need that
-
-<!-- { section: "dc2a16b5-abb1-4119-a10f-46ff75d72d11", x: 12888, y: 216} -->
-
-Update contact field,
-Quiz Post module 3 complete = yes ✅
 
 <!-- { section: "ad56fafa-2f84-49ab-a1b2-bb656ac7126d", x: 13536, y: 312} -->
 
@@ -561,7 +549,7 @@ end
 
 ```stack
 card Message1 do
-  write_result("quiz_pm3 _started", "yes")
+  write_result("template_1", "¡Cuéntame más!")
   then(Message_2)
 end
 
@@ -572,7 +560,7 @@ end
 ```stack
 card QuizComplete do
   update_contact(quiz_post_module3_complete: "true")
-  write_result("quiz_pm1_completed", "yes")
+  write_result("quiz_pm3_completed", "yes")
   then(RunStack_0f3d57)
 end
 
@@ -626,7 +614,7 @@ end
 
 ```stack
 card Message5_2 do
-  write_result("quiz_pm3_q2_value", "a")
+  write_result("quiz_pm3_q2_value", "b")
   write_result("quiz_pm3_q2_score", "0")
   then(Message_6_2)
 end
@@ -637,7 +625,7 @@ end
 
 ```stack
 card Message5_3 do
-  write_result("quiz_pm3_q2_value", "a")
+  write_result("quiz_pm3_q2_value", "c")
   write_result("quiz_pm3_q2_score", "2")
   then(Message_6_3)
 end
